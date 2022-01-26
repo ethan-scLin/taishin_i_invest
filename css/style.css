@@ -1,0 +1,2332 @@
+body {
+    font-family: 'Microsoft JhengHei', sans-serif !important;
+    font-weight: normal;
+    font-size: 16px;
+    overflow-x: hidden;
+    background: #f8f8f8;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+*:after {
+    content: "";
+    clear: both;
+    display: block;
+    width: 100%;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1147px;
+    margin: 0px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.pad,
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: inline-block;
+}
+
+.top {
+    margin-top: 53px;
+    padding: 0 14px;
+    position: relative;
+}
+
+.top h1 {
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 40px;
+    color: #454545;
+    padding-bottom: 3px;
+}
+
+.top .list > a {
+    display: none;
+}
+
+.top .list .box > div {
+    margin-top: 25px;
+}
+
+.top .list .box > div strong {
+    float: left;
+    width: 120px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 21px;
+    color: #4c4b4b;
+}
+
+.top .list .box > div ul {
+    width: calc(100% - 120px);
+    float: left;
+    list-style: none;
+    padding-left: 7px;
+    border-left: solid 1.5px #d6d4d4;
+}
+
+.top .list .box > div ul li {
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 7px;
+}
+
+.top .list .box > div ul li a {
+    display: block;
+    width: 200px;
+    line-height: 40px;
+    border-radius: 20px;
+    background-color: #e5e5e5;
+    font-size: 16px;
+    font-weight: bold;
+    color: #4c4b4b;
+    text-align: center;
+}
+
+.top .list .box > div ul li.active a {
+    background-color: #d70c18;
+    color: #fff;
+}
+
+.main {
+    margin-top: 25px;
+    padding: 40px 138px 65px 191px;
+    background-color: #ffffff;
+}
+
+.main .control h2 {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    color: #454545;
+}
+
+.main .control .primary {
+    float: right;
+}
+
+.primary {
+    display: block;
+    margin: 0px auto;
+    padding: 0 20px;
+    border-radius: 40px;
+    background-color: #d70c18;
+    line-height: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    background: url(../img/loading-icon.png) #d70c18 center no-repeat;
+    background-size: 0 0;
+}
+
+.primary:disabled {
+    background: #e5e5e5;
+    color: #4c4b4b;
+}
+
+.primary.loading {
+    background: url(../img/loading-icon.png) #d70c18 center no-repeat;
+    background-size: 29px 29px;
+    text-indent: -99999px;
+}
+
+.primary i {
+    margin-right: 12px;
+}
+
+.form {
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(183, 183, 183, 0.5);
+    border: solid 1px #dddcdc;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.form .item {
+    padding: 0 56px 0 39px;
+}
+
+.form fieldset {
+    margin-top: 26px;
+    border: 0;
+    border-bottom: solid 1px #e6e6e6;
+    padding: 0 7px 0 5px;
+    position: relative;
+}
+
+.form fieldset:last-of-type {
+    margin-bottom: 22px;
+    border: 0;
+}
+
+.form fieldset > label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 21px;
+    margin-bottom: 20px;
+    color: #454545;
+}
+
+.form fieldset > .filter button {
+    position: absolute;
+    right: 0;
+    top: -7px;
+}
+
+.form fieldset > .filter button + button {
+    bottom: auto;
+    top: 40px;
+    display: none;
+}
+
+.form .input {
+    width: 100%;
+    margin-bottom: 29px;
+    line-height: 31px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #454545;
+}
+
+.form input[type='text'] {
+    padding: 9px 20px 10px 47px;
+    border-radius: 29px;
+    position: relative;
+    background: url(../img/search-icon.png) #f6f6f6 left 19px center no-repeat;
+    background-size: 17px 17px;
+    border: 0;
+    min-width: 302px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #454545;
+    border: solid 1px #f6f6f6;
+}
+
+.form input[type='text']:focus {
+    border-color: #383838;
+}
+
+.form .label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 16px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 25px;
+    color: #454545;
+    cursor: pointer;
+}
+
+.form div.label {
+    cursor: default;
+}
+
+.form .label.half {
+    width: calc(50% - 50px);
+    vertical-align: top;
+    font-weight: bold;
+}
+
+.form .label.half p {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #454545;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    margin: 5px 0 0 25px;
+}
+
+.form .label:last-of-type {
+    margin-right: 0;
+}
+
+.form .label:last-of-type + a {
+    font-size: 16px;
+    font-weight: normal;
+    color: #454545;
+    line-height: 34px;
+    margin: -10px 0;
+    cursor: pointer;
+}
+
+.form .label:last-of-type + a:before {
+    content: "展開所有";
+}
+
+.form .label:last-of-type + a i {
+    display: inline-block;
+    margin: 0 0 0 6px;
+}
+
+.form .label:last-of-type + a.open:before {
+    content: "收起其餘";
+}
+
+.form .label:last-of-type + a.open i {
+    transform: rotate(180deg);
+}
+
+.form input[type='checkbox'],
+.form input[type='radio'] {
+    display: none;
+}
+
+.form .label > span {
+    width: 18px;
+    height: 18px;
+    border: 1.5px solid #da2128;
+    color: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    text-align: center;
+    margin-top: -3px;
+    position: relative;
+}
+
+.form .label > span i {
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.form input:checked + span {
+    border: 1px solid #d70c18;
+    background: #d70c18;
+}
+
+.form .label b {
+    font-weight: normal;
+}
+
+.form .ui-widget-content {
+    width: 280px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 51px;
+    height: 10px;
+    border-radius: 2.5px;
+    border: 1px solid #da2128;
+}
+
+.form .ui-widget-content .ui-widget-header {
+    border: 1px solid #da2128;
+    background-color: #da2128;
+    border-radius: 2.5px;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+.form .ui-widget-content .ui-slider-handle {
+    width: 25px;
+    height: 25px;
+    background: url(../img/range-icon.png) no-repeat;
+    background-size: 100%;
+    border: 0;
+    top: -8px;
+    cursor: pointer;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+.form input[type='phone'] {
+    width: 90px;
+    height: 31px;
+    margin: 0 19px 0 9px;
+    padding: 4px 8px 6px;
+    border-radius: 2px;
+    border: solid 1px #a9a9a9;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    color: #454545;
+}
+
+.form input[type='phone']:focus {
+    border-color: #383838;
+}
+
+.form input[type='phone'].percent {
+    background: url(../img/input-percent-icon.png) right 8px center no-repeat;
+    background-size: auto 18px;
+}
+
+.form input[type='phone'].year {
+    background: url(../img/input-year-icon.png) right 8px center no-repeat;
+    background-size: auto 18px;
+}
+
+.form input[type='phone'].money {
+    background: url(../img/input-money-icon.png) right 8px center no-repeat;
+    background-size: auto 18px;
+}
+
+.space {
+    border: 0;
+    font-size: 16px;
+    font-weight: bold;
+    height: 33px;
+    color: #d70c18;
+    position: relative;
+    background: #fff;
+    cursor: pointer;
+    text-align: left;
+    padding: 0 34px 0 14px;
+    border-radius: 5px;
+}
+
+.space.bg {
+    background: #fcfcfc;
+}
+
+.space.noicon {
+    padding-right: 10px;
+    text-decoration: underline;
+}
+
+.space.noicon.gray {
+    font-weight: normal;
+    color: #454545;
+    text-decoration: none;
+    cursor: default;
+}
+
+.space.noicon.gray.active {
+    border-radius: 2px;
+    background-color: #ececec;
+    color: #b09545;
+}
+
+.space:disabled {
+    color: #a9a9a9;
+}
+
+.space i {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    margin: auto;
+}
+
+.space.noicon i {
+    display: none;
+}
+
+.space.open i {
+    transform: rotate(180deg);
+}
+
+.form fieldset > .space {
+    margin-left: -14px;
+}
+
+.form .label .select {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    overflow: visible;
+}
+
+.form .label .select b {
+    line-height: 34px;
+    padding: 0 36px 0 12px;
+    border-radius: 17.5px;
+    border: solid 1px #626262;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-weight: normal;
+    color: #454545;
+    position: relative;
+}
+
+.form .label:not(.special) .select b {
+    display: block;
+}
+
+.form .label .select.open b,
+.form input:checked + span + .select b {
+    border-color: #ffcccf;
+    background: #ffcccf;
+}
+
+.form .label .select b i {
+    position: absolute;
+    right: 11px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 15px;
+}
+
+.form .label .select.open b i,
+.form input:checked + span + .select b i {
+    transform: rotate(180deg);
+}
+
+.form .label .select .popup {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 374px;
+    padding: 0 15px 0 20px;
+    border-radius: 10px;
+    box-shadow: 9px 8px 27px -7px rgba(43, 43, 43, 0.26);
+    background-color: #ffffff;
+    border: solid 0px transparent;
+    z-index: 98;
+}
+
+.form .label .select.open .popup {
+    max-height: 500px;
+    border: 1px solid #e0e0e0;
+    z-index: 99;
+}
+
+.form .label .select .popup hr {
+    display: block;
+    width: calc(100% + 44px);
+    margin: 0 0 0 -29px;
+    height: 2px;
+    background: #e6e6e6;
+    border: 0;
+}
+
+.form .label .select .popup title {
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 26px;
+    color: #454545;
+    margin: 14px 0;
+}
+
+.form .label .select .popup .search {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    height: 26px;
+    padding: 0 18px 0 47px;
+    min-width: inherit;
+    width: 165px;
+}
+
+.form .label .select .popup .list {
+    padding-bottom: 15px;
+    max-height: 195px;
+    overflow: auto;
+}
+
+.form .label .select .popup .list .label {
+    width: calc(33% - 3px);
+    margin: 20px 0 0 0;
+    vertical-align: top;
+}
+
+.form .label .select .popup .list .label.half {
+    width: calc(50% - 3px);
+}
+
+.form .label .select .popup .list .label.all {
+    width: 100%;
+    font-weight: bold;
+}
+
+.form .label .select .popup .list .label.all p {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #454545;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    margin: 5px 0 0 0;
+    padding: 0 14px 0 0;
+}
+
+.form .label .select .popup .button {
+    padding: 20px 0 18px 0;
+}
+
+.form .label .select .popup .button .primary {
+    float: right;
+}
+
+.form .label .select .popup .button .space {
+    float: left;
+    margin-left: -14px;
+}
+
+.form .more {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.form .more.open {
+    max-height: 1000px;
+}
+
+.form .more.open fieldset:last-of-type {
+    border-bottom: solid 1px #e6e6e6;
+    margin-bottom: 0;
+}
+
+.form .foot {
+    padding: 24px 0 21px 0;
+    background-color: #f0f0f0;
+    border-radius: 0 0 4px 4px;
+}
+
+.main .bottom {
+    margin-top: 29px;
+    background: url(../img/bottom-logo.png) bottom right no-repeat;
+    background-size: 352px auto;
+    padding: 14px 0 25px 54px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(183, 183, 183, 0.5);
+    border: solid 1px #dddcdc;
+    background-color: #ffffff;
+}
+
+.main .bottom > div {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.main .bottom > div + div {
+    margin-left: 51px;
+}
+
+.main .bottom > div title {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 27px;
+    color: #d70c18;
+    margin-bottom: 24px;
+}
+
+.secondary {
+    display: block;
+    border-radius: 40px;
+    border: solid 1.5px #d70c18;
+    line-height: 37px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #d70c18;
+    background-color: #ffffff;
+    cursor: pointer;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.secondary:disabled {
+    border-color: #a9a9a9;
+    color: #a9a9a9;
+}
+
+.main .bottom > div span {
+    display: inline-block;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #d80c18;
+    margin: 16px 17px 0 0;
+}
+
+.main .bottom > div span img {
+    float: left;
+    width: 24px;
+    margin-right: 10px;
+}
+
+.form .alert {
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    background-color: rgba(18, 18, 18, 0.33);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form .alert.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.form .alert > div {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 453px;
+    height: 365px;
+    background: #fff;
+}
+
+.form .alert > div .head {
+    padding: 0 43px;
+    line-height: 49px;
+    background-color: #c00000;
+    font-size: 20px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.form .alert > div .text {
+    padding: 22px 43px 0 43px;
+    position: relative;
+    height: calc(100% - 136px);
+    overflow: auto;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #454545;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    overflow-y: scroll;
+}
+
+.form .alert > div .text p {
+    margin-bottom: 15px;
+}
+
+.form .alert > div .text ul {
+    list-style: decimal;
+    margin-left: 20px;
+}
+
+.form .alert > div .text ul li {
+    margin-bottom: 15px;
+}
+
+.form .alert > div button {
+    margin: 18px auto 29px auto;
+    padding: 0 79px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: 0;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fff;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: 0;
+    background-color: rgba(192, 0, 0, 0.39);
+}
+
+.breadcrumb {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 16px;
+    color: #454545;
+    margin-top: 15px;
+    padding: 0 14px;
+}
+
+.breadcrumb a {
+    display: inline-block;
+    vertical-align: top;
+    color: #454545;
+    line-height: 15px;
+}
+
+.breadcrumb i {
+    display: inline-block;
+    vertical-align: top;
+    font-style: normal;
+    margin: 0 5px;
+    line-height: 15px;
+}
+
+.top .button {
+    float: right;
+    margin-bottom: 17px;
+}
+
+.top .button button {
+    float: right;
+}
+
+.top .button button.secondary {
+    padding: 0 39px;
+    margin-right: 10px;
+}
+
+.search-filter {
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    padding: 0 23px 19px 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 0 rgba(143, 143, 143, 0.3);
+    background-color: #fcfcfc;
+    position: relative;
+    padding-left: 90px;
+}
+
+.search-filter > .more.open {
+    max-height: 150px;
+}
+
+.search-filter > title {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: 25px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #454545;
+}
+
+.search-filter .label {
+    margin: 20px 0 0 12px;
+}
+
+.search-filter .label.desktop {
+    display: inline-block;
+}
+
+.search-filter .label.pad {
+    display: none;
+}
+
+.form .label.close {
+    cursor: default;
+}
+
+.form .label.close .select i,
+.form .label:not(.close) .select b {
+    cursor: pointer;
+}
+
+.form .label .select .popup .input .ui-widget-content {
+    margin: 30px 0 40px 0;
+    display: block;
+}
+
+.search-filter > .space {
+    position: absolute;
+    right: 15px;
+    top: 19px;
+}
+
+.info {
+    margin: 21px 0 15px 0;
+    line-height: 35px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #454545;
+    padding: 0 14px;
+}
+
+.info > strong {
+    display: inline-block;
+    font-weight: normal;
+}
+
+.info > small {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #454545;
+    margin-top: 5px;
+}
+
+.info .right {
+    float: right;
+}
+
+.info .right > b {
+    display: inline-block;
+    font-weight: normal;
+}
+
+.info .right .custom-select {
+    display: inline-block;
+    vertical-align: middle;
+    height: 38px;
+    line-height: 33px;
+    border-radius: 30px;
+    border: solid 1px #626262;
+    background-color: #ffffff;
+    padding: 0 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+.info .right .custom-select select {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 35px;
+    cursor: pointer;
+    background: none;
+}
+
+.info .right .custom-select select option {
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+.info .right .custom-select > span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.info .right .custom-select > i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 43px;
+}
+
+.info .right .custom-select-btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 17px;
+}
+
+.info .right .custom-select-btn button {
+    text-align: left;
+    width: 100%;
+    display: none;
+    height: 38px;
+    border-radius: 30px;
+    border: solid 1px #626262;
+    background-color: #ffffff;
+    padding: 0 12px 0 45px;
+    cursor: pointer;
+    position: relative;
+    color: #454545;
+    background: url(../img/sort-icon.png) #fff left 15px center no-repeat;
+    background-size: auto 17px;
+}
+
+.info .right .custom-select-btn button.active {
+    display: block;
+}
+
+.info .right .custom-select-btn button.turn {
+    background: url(../img/sort-icon_.png) #fff left 15px center no-repeat;
+    background-size: auto 17px;
+}
+
+.info .right .custom-select-btn button#select-btn1:before {
+    content: "高到低";
+}
+
+.info .right .custom-select-btn button#select-btn2 {
+    background: url(../img/sort-icon_.png) #fff left 15px center no-repeat;
+    background-size: auto 17px;
+}
+
+.info .right .custom-select-btn button#select-btn2.turn {
+    background: url(../img/sort-icon.png) #fff left 15px center no-repeat;
+    background-size: auto 17px;
+}
+
+.info .right .custom-select-btn button#select-btn2:before {
+    content: "短到長";
+}
+
+.info .right .custom-select-btn button#select-btn3:before {
+    content: "高到低";
+}
+
+.info .right .custom-select-btn button#select-btn4:before {
+    content: "高到低";
+}
+
+.info .right .custom-select-btn button#select-btn5:before {
+    content: "一般先";
+}
+
+.info .right .custom-select-btn button#select-btn1.turn:before {
+    content: "低到高";
+}
+
+.info .right .custom-select-btn button#select-btn2.turn:before {
+    content: "長到短";
+}
+
+.info .right .custom-select-btn button#select-btn3.turn:before {
+    content: "低到高";
+}
+
+.info .right .custom-select-btn button#select-btn4.turn:before {
+    content: "低到高";
+}
+
+.info .right .custom-select-btn button#select-btn5.turn:before {
+    content: "專業先";
+}
+
+.info .right > .secondary {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.search-list {
+    padding: 0 10px;
+}
+
+.search-list > div {
+    width: 100%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: solid 1px #fff;
+    margin-bottom: 15px;
+}
+
+.search-list > div.open {
+    box-shadow: 9px 8px 27px -7px rgba(43, 43, 43, 0.26);
+    border-color: #e0e0e0;
+}
+
+.search-list > div .detail {
+    padding: 15px 20px 19px 85px;
+    position: relative;
+    z-index: 2;
+}
+
+.search-list > div.open .detail {
+    box-shadow: 0 4px 7px -5px rgba(113, 113, 113, 0.5);
+    border-radius: 4px 4px 0 0;
+}
+
+.search-list > div .detail > * {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.search-list > div label {
+    width: 49px;
+    height: 48px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 19px;
+    color: #454545;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    margin: auto;
+    padding-top: 5px;
+}
+
+.search-list > div label input,
+.search-list > div label i + i {
+    display: none;
+}
+
+.search-list > div label i {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.search-list > div label input:checked + i {
+    display: none;
+}
+
+.search-list > div label input:checked + i + i {
+    display: block;
+    color: #a11616;
+}
+
+.search-list > div label input:checked + i + i + span:before {
+    content: "已";
+}
+
+.search-list > div .name {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 21px;
+    letter-spacing: normal;
+    width: calc(100% - 760px);
+    padding-right: 15px;
+}
+
+.search-list > div.open .name {
+    text-align: justify; 
+    text-justify: inter-ideograph;
+}
+
+.search-list > div .name small {
+    display: inline-block;
+    color: #d70c18;
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+
+.search-list > div .name i {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #b19445;
+    line-height: 23px;
+    padding: 0 7px;
+    border-radius: 3px;
+    background-color: #e7e7e7;
+    margin-left: 7px;
+    font-style: normal;
+}
+
+.search-list > div .name strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 42px;
+    color: #3e3e3e;
+}
+
+.search-list > div.open .name strong {
+    -webkit-line-clamp: 100;
+    height: auto;
+}
+
+.search-list > div .data {
+    padding: 12px 0 12px 15px;
+    border-left: solid 1.5px #e2e2e2;
+}
+
+.search-list > div .data > span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 35px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 21px;
+    color: #3e3e3e;
+}
+
+.search-list > div .data > span:last-of-type {
+    margin-right: 0;
+}
+
+.search-list > div .data > span small {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 19px;
+    color: #adadad;
+    margin-bottom: 7px;
+}
+
+.search-list > div .data > span.up i {
+    color: #FF4646;
+    margin-right: 4px;
+}
+
+.search-list > div .data > span.down i {
+    color: #0BDF6D;
+    margin-right: 4px;
+}
+
+.search-list > div .btn {
+    float: right;
+    padding: 15px 0 15px 15px;
+    border-left: solid 1.5px #e2e2e2;
+}
+
+.search-list > div .btn > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.search-list > div .btn > button {
+    margin-right: 10px;
+}
+
+.search-list > div .btn > button.secondary {
+    display: none;
+}
+
+.search-list > div .btn > i {
+    font-size: 20px;
+    color: #454545;
+    cursor: pointer;
+}
+
+.search-list > div.open .btn > i {
+    transform: rotate(180deg);
+}
+
+.search-list > div .sm-btn {
+    display: none;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #454545;
+    line-height: 20px;
+    margin-top: 35px;
+    white-space: nowrap;
+}
+
+.search-list > div .sm-btn i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.search-list > div .sm-btn:before {
+    content: "展開";
+    display: inline;
+    margin-right: -4px;
+}
+
+.search-list > div.open .sm-btn > i {
+    transform: rotate(180deg);
+}
+
+.search-list > div.open .sm-btn:before {
+    content: "收合";
+}
+
+.pagination {
+    margin: 45px 0;
+    text-align: center;
+    color: #675c5c;
+    line-height: 25px;
+}
+
+.pagination a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #675c5c;
+    margin: 0 5px;
+}
+
+.pagination a.active {
+    border-radius: 2px;
+    background-color: #d70c18;
+    color: #fff;
+}
+
+.pagination span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    line-height: 25px;
+    color: #c0c0c0;
+}
+
+.pagination i {
+    font-size: 14px;
+}
+
+.search-list > div .more {
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 0 0 4px 4px;
+    background-color: #f0f0f0;
+    position: relative;
+    z-index: 1;
+    padding: 0 190px 0 8.5%;
+}
+
+.search-list > div.open .more {
+    padding: 15px 190px 22px 8.5%;
+    max-height: 250px;
+}
+
+.search-list > div .more > div {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 45px;
+    width: calc(33% - 32px);
+}
+
+.search-list > div .more > div:last-of-type {
+    margin-right: 0;
+}
+
+.search-list > div .more > div title {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 15px;
+    color: #636363;
+}
+
+.search-list > div .more > div img {
+    display: block;
+    width: 100%;
+}
+
+.search-list > div .more > div img + small {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+    color: #9c9c9c;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+.search-list > div .more > div table {
+    width: 100%;
+    margin-top: -15px;
+}
+
+.search-list > div .more > div table tr th {
+    font-size: 14px;
+    font-weight: normal;
+    color: #9c9c9c;
+    line-height: 40px;
+    text-align: left;
+}
+
+.search-list > div .more > div:last-of-type table tr th:last-of-type {
+    text-align: right;
+}
+
+.search-list > div .more > div table tr td {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #636363;
+    border-bottom: solid 1px #dedede;
+    text-align: left;
+}
+
+.search-list > div .more > div table tr td:last-of-type {
+    text-align: right;
+}
+
+.search-list > div .more > button.secondary {
+    position: absolute;
+    right: 28px;
+    bottom: 28px;
+    width: 120px;
+    padding: 0;
+}
+
+.form .label.special-search {
+    margin: 0 0 0 -29px;
+    width: calc(100% + 44px);
+}
+
+.form .label.special-search + hr {
+    margin-top: -25px !important;
+}
+
+.form .label.special-search.open + hr {
+    margin-top: 0 !important;
+}
+
+.form .label.special-search .select .popup {
+    position: relative;
+    width: 100%;
+    box-shadow: none;
+    border: 0;
+    background: #f0f0f0;
+    border-radius: 0;
+    margin: 0;
+    padding: 0 0 0 29px;
+    top: 0;
+}
+
+.form .label.special-search .select a i {
+    position: absolute;
+    top: -50px;
+    left: 100px;
+    cursor: pointer;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+.form .label.special-search.open .select a i {
+    top: -35px;
+}
+
+.form .label.special-search.open .select a i {
+    transform: rotate(180deg);
+}
+
+.form .label.special-search .select .popup {
+    max-height: 0;
+    overflow: hidden;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+}
+
+.form .label.special-search.open .select .popup {
+    max-height: 150px;
+}
+
+.form .label.special-search .select .popup .list .label > span {
+    color: #f0f0f0;
+}
+
+.form .label.special-search .select .popup hr,
+.form .label.special-search .select .popup .button {
+    display: none;
+}
+
+.form .label.special-search .select .popup .list {
+    max-height: none;
+    overflow: hidden;
+}
+
+.tooltip {
+    bottom: 100%;
+    color: #fff;
+    display: block;
+    left: -32px;
+    margin-bottom: 13px;
+    opacity: 1;
+    pointer-events: none;
+    position: absolute;
+    -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+    width: auto;
+    text-align: center;
+    padding: 10px;
+    object-fit: contain;
+    border-radius: 1px;
+    background-color: #d70c18;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 21px;
+    white-space: nowrap;
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.tooltip:before {
+    bottom: -20px;
+    content: " ";
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+/* CSS Triangles */
+.tooltip:after {
+    border-left: solid transparent 8px;
+    border-right: solid transparent 8px;
+    border-top: solid #d70c18 8px;
+    bottom: -8px;
+    content: ' ';
+    height: 0;
+    left: 50%;
+    margin-left: -8px;
+    position: absolute;
+    width: 0;
+}
+
+.ui-slider-handle.ui-state-focus {
+    outline: 0;
+}
+
+@media screen and (min-width: 1025px) {
+    .primary:hover {
+        box-shadow: 0 2px 4px 0 rgba(82, 82, 82, 0.43);
+    }
+
+    .space.noicon.gray:hover {
+        background: none;
+    }
+
+    .space.noicon.gray.active:hover {
+        background-color: #ececec;
+    }
+
+    .space:hover {
+        background: #f0f0f0;
+    }
+
+    .form .label .select:hover b {
+        border-color: #ff5151;
+    }
+
+    .form .label .select .popup .list .label {
+        position: relative;
+        padding-left: 25px;
+    }
+
+    .form .label .select .popup .list .label span {
+        position: absolute;
+        left: 0;
+        top: 7px;
+    }
+
+    .secondary:hover {
+        background-color: #ffc8cb;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+    }
+
+    .search-list > div label:hover {
+        background: #ffc8cb;
+    }
+
+    .search-list > div:hover .name strong {
+        text-decoration: underline;
+    }
+
+    .pagination a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .search-list > div:hover {
+        box-shadow: 9px 8px 27px -7px rgba(43, 43, 43, 0.26);
+        border-color: #e0e0e0;
+    }
+
+    .top .list .box > div ul li:hover a {
+        background-color: #d70c18;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+
+    .desktop,
+    .mobile {
+        display: none;
+    }
+
+    .pad {
+        display: inline-block;
+    }
+
+    .wrapper {
+        padding: 0 18px;
+    }
+
+    .top {
+        margin-top: 17px;
+        padding: 0;
+    }
+
+    .top h1 {
+        padding-bottom: 11px;
+    }
+
+    .top .list {
+        background-color: #d8d8d8;
+        padding: 17px 19px 14px 19px;
+        overflow: visible;
+        position: relative;
+        z-index: 99;
+    }
+
+    .top .list .box {
+        position: absolute;
+        left: 0;
+        top: 78px;
+        border-radius: 10px;
+        box-shadow: 9px 8px 27px -7px rgba(43, 43, 43, 0.26);
+        border: solid 1px #e0e0e0;
+        background-color: #ffffff;
+    }
+
+    .top .list > a {
+        display: block;
+        border-radius: 23.5px;
+        background-color: #ffffff;
+        line-height: 47px;
+        font-size: 16px;
+        font-weight: normal;
+        text-align: center;
+        color: #4c4b4b;
+        position: relative;
+    }
+
+    .top .list > a.open {
+        font-weight: bold;
+    }
+
+    .top .list > a i {
+        position: absolute;
+        right: 36px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 15px;
+    }
+
+    .top .list > a.open i {
+        transform: rotate(180deg);
+    }
+
+    .top .list .box {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .top .list > a.open + .box {
+        max-height: 500px;
+        overflow: auto;
+    }
+
+    .top .list .box > div {
+        margin-top: 0;
+    }
+
+    .top .list .box > div strong {
+        width: 100%;
+        font-size: 18px;
+        color: #9b9b9b;
+        padding: 13px 18px 10px 18px;
+    }
+
+    .top .list .box > div ul {
+        width: 100%;
+        padding: 0;
+        border: 0;
+    }
+
+    .top .list .box > div ul li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .top .list .box > div ul li a {
+        padding: 10px 18px;
+        width: 100%;
+        line-height: 21px;
+        border-radius: 0;
+        background: none;
+        text-align: left;
+    }
+
+    .top .list .box > div ul li.active a,
+    .top .list .box > div ul li:hover a {
+        background-color: #ffe0e1;
+        color: #4c4b4b;
+    }
+
+    .top .list .box > div + div {
+        margin-top: 20px;
+        border-top: solid 1px #e0e0e0;
+    }
+
+    .main {
+        margin-top: 23px;
+        padding: 0;
+        background: none;
+    }
+
+    .form {
+        margin-top: 23px;
+    }
+
+    .form .item {
+        padding: 0 0 0 15px;
+    }
+
+    .form fieldset {
+        padding: 0;
+    }
+
+    .form .foot {
+        padding: 17px 0 18px 0;
+    }
+
+    .main .bottom {
+        margin: 28px auto 23px auto;
+        background: url(../img/bottom-logo.png) bottom right no-repeat;
+        background-size: 314px auto;
+        padding: 11px 0 25px 48px;
+    }
+
+    .main .bottom > div + div {
+        margin-left: 22px;
+    }
+
+    .main .bottom > div span {
+        line-height: 22px;
+        margin: 17px 5px 0 0;
+    }
+
+    .main .bottom > div span img {
+        margin-right: 7px;
+    }
+
+    .breadcrumb {
+        padding: 0;
+    }
+
+    .search-filter {
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+
+    .search-filter .label.desktop {
+        display: none;
+    }
+
+    .search-filter .label.pad {
+        display: inline-block;
+    }
+
+    .form.search-filter .label.right .select .popup,
+    .form.search-filter .label.right .select .popup,
+    .form.search-filter .label.right .select .popup {
+        left: auto;
+        right: 0;
+    }
+
+    .info {
+        padding: 0;
+    }
+
+    .search-list {
+        padding: 0;
+    }
+
+    .search-list > div .detail {
+        padding: 18px 5px 15px 70px;
+    }
+
+    .search-list > div label {
+        left: 10px;
+        top: 55px;
+    }
+
+    .search-list > div .name {
+        width: 220px;
+        padding-right: 10px;
+    }
+
+    .search-list > div .name i {
+        margin: 0 0 10px 0;
+    }
+
+    .search-list > div .name strong {
+        -webkit-line-clamp: 4;
+        height: 84px;
+    }
+
+    .search-list > div .data {
+        width: calc(100% - 360px);
+        padding: 0 0 0 10px;
+    }
+
+    .search-list > div .data > span {
+        width: calc(33% - 3px);
+        margin-right: 0;
+    }
+
+    .search-list > div .data > span:nth-of-type(1),
+    .search-list > div .data > span:nth-of-type(2),
+    .search-list > div .data > span:nth-of-type(3) {
+        margin-bottom: 20px;
+    }
+
+    .search-list > div .btn {
+        padding: 15px 0 0 10px;
+    }
+
+    .search-list > div .btn > i {
+        display: none;
+    }
+
+    .search-list > div .btn > button {
+        width: 100px;
+        padding: 0;
+    }
+
+    .search-list > div .btn > button.secondary {
+        display: block;
+        margin-top: 30px;
+    }
+
+    .search-list > div .more * {
+        display: none
+    }
+
+    .search-list > div .more,
+    .search-list > div.open .more {
+        padding: 0;
+    }
+
+    .search-list > div .more > div:first-of-type {
+        display: block;
+        width: 313px;
+        margin: 0px auto;
+        padding: 23px 0 19px 0;
+    }
+
+    .search-list > div .more > div title {
+        display: none;
+    }
+
+    .search-list > div .sm-btn {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 765px) {
+
+    .desktop,
+    .pad {
+        display: none;
+    }
+
+    .mobile {
+        display: inline-block;
+    }
+
+    .wrapper {
+        padding: 0;
+    }
+
+    .top h1 {
+        padding: 0 19px 19px 19px;
+    }
+
+    .top h1 small {
+        display: inline-block;
+        vertical-align: bottom;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 22px;
+        color: #454545;
+        margin: 0 0 5px 10px;
+    }
+
+    .main {
+        margin-top: 24px;
+    }
+
+    .main .control {
+        padding: 0 20px 0 19px;
+    }
+
+    .main .control h2 {
+        margin-bottom: 23px;
+    }
+
+    .form {
+        margin-top: 16px;
+    }
+
+    .form .foot {
+        padding: 25px 0;
+    }
+
+    .form .item {
+        padding: 0 20px;
+    }
+
+    .form fieldset > .filter {
+        position: absolute;
+        right: -5px;
+        top: 0;
+    }
+
+    .form fieldset > .filter button {
+        right: auto;
+        top: auto;
+        position: relative;
+        display: inline-block;
+    }
+
+    .form fieldset > .filter button + button {
+        right: auto;
+        top: auto;
+        position: relative;
+    }
+
+    .form .label {
+        display: block;
+        padding-top: 20px;
+        margin: -15px 0 20px 0;
+    }
+
+    .form .label.desktop {
+        display: none;
+    }
+
+    .form .label > span {
+        float: right;
+        margin: 2px 0 0 20px;
+    }
+
+    .form .label.half {
+        width: 100%;
+    }
+
+    .form .label.half p {
+        margin: 15px 50px 0 0;
+    }
+
+    .form .ui-widget-content {
+        display: block;
+        width: calc(100% - 25px);
+        margin: 30px 0 30px 6px;
+    }
+
+    .form input[type='text'] {
+        width: 100%;
+    }
+
+    .form input[type='phone'] {
+        width: calc(50% - 60px);
+    }
+
+    .form input[type='phone']:last-of-type {
+        margin: 0 0 0 9px;
+    }
+
+    .form .more.open {
+        max-height: 2000px;
+    }
+
+    .form .label .select {
+        display: block;
+        width: 100%;
+    }
+
+    .form .label .select .popup {
+        width: 100%;
+        padding: 0;
+    }
+
+    .form .label .select .popup title {
+        display: none;
+    }
+
+    .form .label .select .popup hr {
+        width: 100%;
+        margin: 0;
+        height: 1px;
+    }
+
+    .form .label .select .popup .search {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin: 14px 25px 12px 25px;
+        height: 38px;
+        width: calc(100% - 50px);
+    }
+
+    .form .label .select .popup .list {
+        position: relative;
+        max-height: 25vh;
+        overflow-y: scroll;
+        padding: 0 25px 26px 25px;
+    }
+
+    .form .label .select .popup .list .label {
+        width: 100%;
+        margin: 0 0 9px 0;
+    }
+
+    .form .label .select .popup .button {
+        padding: 11px 25px 14px 25px;
+    }
+
+    .main .bottom {
+        width: 90%;
+        margin: 21px auto 58px auto;
+        background: url(../img/bottom-logo.png) bottom right no-repeat;
+        background-size: 325px auto;
+        padding: 20px 41px 60px 18px;
+    }
+
+    .main .bottom > div title {
+        margin-bottom: 11px;
+    }
+
+    .main .bottom > div + div {
+        margin-left: 0;
+        display: block;
+    }
+
+    .main .bottom > div span {
+        margin: 17px 5px 0 0;
+    }
+
+    .form .alert {
+        position: fixed;
+    }
+
+    .form .alert > div {
+        width: 90%;
+        max-width: 321px;
+        height: 438px;
+    }
+
+    .form .alert > div .head {
+        padding: 0 31px;
+    }
+
+    .form .alert > div .text {
+        padding: 22px 31px 0 31px;
+    }
+
+    .form .alert > div .text p,
+    .form .alert > div .text ul li {
+        margin-bottom: 20px;
+    }
+
+    .form .input.special .label {
+        width: calc(100vw - 45px);
+    }
+
+    .form .label.special {
+        float: right;
+        margin: 0;
+        padding: 0;
+        width: calc(100vw - 150px) !important
+    }
+
+    .form .label.special .select b {
+        padding: 0;
+        border: 0;
+    }
+
+    .form .label.special .select b.mobile {
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+        top: -50px;
+        border-radius: 0;
+    }
+
+    .form .label.special .select b i {
+        position: relative;
+        right: 0;
+        float: right;
+        margin: 10px 0 0 6px;
+    }
+
+    .form .label.special .select .popup {
+        position: relative;
+        width: calc(100% + 142px);
+        margin-left: -127px;
+        box-shadow: none;
+        border: 0;
+        background: #f0f0f0;
+        border-radius: 0;
+        top: 0;
+    }
+
+    .form .label.special .select.open b {
+        background: none;
+    }
+
+    .form .label.special .select .popup hr,
+    .form .label.special .select .popup .button {
+        display: none;
+    }
+
+    .form .label.special .select .popup .list {
+        max-height: none;
+        overflow: hidden;
+    }
+
+    .form .label.special .select .popup .list .label {
+        width: calc(100vw - 45px);
+        margin: 0;
+    }
+
+    .form .label.special .select .popup .list .label > span {
+        margin-right: 3px;
+        color: #f0f0f0;
+    }
+
+    .breadcrumb {
+        padding: 0 19px;
+    }
+
+    .top .button {
+        margin: 0 20px 0 0;
+        width: 182px;
+    }
+
+    .top .button button {
+        float: none;
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .top .button button + button {
+        margin: 26px 0 0 0;
+    }
+
+    .info {
+        padding: 0 19px;
+        margin-top: 0;
+    }
+
+    .info > strong,
+    .info .right > b {
+        display: none;
+    }
+
+    .info > small {
+        margin-top: 15px;
+    }
+
+    .info .right .custom-select > i {
+        margin-left: 0;
+        float: right;
+        margin-top: 10px;
+    }
+
+    .info > button {
+        width: 100%;
+        text-align: center;
+        float: left;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 36px;
+        color: #454545;
+        padding: 0 0 0 40px;
+        border-radius: 20px;
+        border: solid 1px #626262;
+        background: url(../img/filter-icon.png) left calc(50% - 40px) center no-repeat #fff;
+        background-size: 18px 19px;
+        cursor: pointer;
+    }
+
+    .info .right {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .info .right .custom-select {
+        float: left;
+        width: calc(100% - 135px);
+    }
+
+    .info .right .custom-select-btn {
+        float: right;
+        width: 120px;
+        margin: 0;
+    }
+
+    .info .right .custom-select > span {
+        white-space: nowrap;
+        width: calc(100% - 10px);
+        overflow: hidden;
+    }
+
+    .form.mobile {
+        position: fixed;
+        top: 1000px;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        box-shadow: none;
+        border: 0;
+    }
+
+    .form.mobile.show {
+        top: 85px;
+        z-index: 99;
+        height: calc(100% - 90px);
+        box-shadow: 0 0 7px 0 rgba(43, 43, 43, 0.26);
+    }
+
+    .form.mobile .item {
+        height: calc(100% - 159px);
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .form > .title {
+        padding: 18px 20px 13px 19px;
+        background-color: #f0f0f0;
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 27px;
+        color: #454545;
+    }
+
+    .form > .title img {
+        float: right;
+        width: 20px;
+        cursor: pointer;
+        margin-top: 3px;
+    }
+
+    .info .right.all {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .info .right > .secondary {
+        display: block;
+        margin: 0 0 15px 0;
+        width: 100%;
+    }
+
+    .search-list {
+        padding: 0 19px;
+    }
+
+    .search-list > div {
+        padding: 19px 20px 86px 20px;
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .search-list > div .detail {
+        position: static;
+        padding-left: 0;
+    }
+
+    .search-list > div .detail > * {
+        display: block;
+    }
+
+    .search-list > div label {
+        left: auto;
+        right: 17px;
+        top: 70px;
+    }
+
+    .search-list > div .name {
+        width: calc(100% - 60px);
+        padding: 0;
+        text-align: justify; 
+        text-justify: inter-ideograph;
+    }
+    
+    .search-list > div .name strong {
+        -webkit-line-clamp: 100;
+        height: auto;
+        min-height: 42px;
+    }
+
+    .search-list > div .data {
+        width: 100%;
+        padding: 22px 0 0 0;
+        margin: 20px 0 0 0;
+        border: 0;
+        border-top: solid 1.5px #e2e2e2;
+    }
+
+    .search-list > div .btn {
+        position: absolute;
+        bottom: 23px;
+        left: 0;
+        right: 0;
+        width: calc(100% - 40px);
+        padding: 23px 0 0 0;
+        margin: 21px auto 0 auto;
+        float: none;
+        border: 0;
+        border-top: solid 1.5px #e2e2e2;
+    }
+
+    .search-list > div .btn > button {
+        width: calc(50% - 11px);
+        float: left;
+    }
+
+    .search-list > div .btn > button.secondary {
+        margin: 0;
+        float: right;
+    }
+
+    .pagination {
+        margin: 55px 0;
+    }
+
+    .search-list > div .more,
+    .search-list > div.open .more {
+        width: calc(100% + 40px);
+        margin: 0 -20px;
+        border-radius: 0;
+    }
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    .search-list > div .name strong {
+        display: block;
+    }
+}

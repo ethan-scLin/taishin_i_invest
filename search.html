@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>i理財 - 台新銀行</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--Mobile Only -->
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="i理財">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="台新銀行">
+    <meta property="og:image" content="img/fbshare.png">
+    <meta property="og:url" content="">
+    <!--Mobile Only -->
+    <link rel="shortcut icon" href="https://www.taishinbank.com.tw/TSB/system/modules/com.thesys.project.TSB/resources/img/favicon.ico?v=2">
+    <link rel="canonical" href="">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper" style="overflow: visible;">
+        <div class="breadcrumb">
+            <a href="">產品總覽</a> <i>></i> <a href="">海外債券</a> <i>></i> 搜尋結果
+        </div>
+        <div class="top">
+            <div class="button">
+                <button type="button" onclick="javascript:location.href='list.html'" class="primary"><i class="fas fa-heart"></i>我的觀察海外債券</button>
+                <button type="button" onclick="javascript:location.href='index.html'" class="secondary">重新查詢</button>
+            </div>
+            <h1>搜尋結果</h1>
+        </div>
+        <form class="form search-filter desktop pad">
+            <title>篩選條件：</title>
+            <div class="label close">
+                <div class="select other_select without_move">
+                    <b>固定收益債券<i class="fas fa-times"></i></b>
+                </div>
+            </div>
+            <div class="label">
+                <div class="select other_select">
+                    <b>發行幣別<i class="fas fa-caret-down"></i></b>
+                    <div class="popup">
+                        <div>
+                            <title>選擇發行幣別</title>
+                        </div>
+                        <hr>
+                        <div class="list scrollbar">
+                            <label class="label"><input type="checkbox" class="dt_urrency" checked><span><i class="fas fa-check"></i></span>USD</label>
+                            <label class="label"><input type="checkbox" class="dt_urrency" checked><span><i class="fas fa-check"></i></span>AUD</label>
+                            <label class="label"><input type="checkbox" class="dt_urrency" checked><span><i class="fas fa-check"></i></span>ZAR</label>
+                            <label class="label"><input type="checkbox" class="dt_urrency" checked><span><i class="fas fa-check"></i></span>CNH</label>
+                            <label class="label"><input type="checkbox" class="dt_urrency"><span><i class="fas fa-check"></i></span>NZD</label>
+                            <label class="label"><input type="checkbox" class="dt_urrency"><span><i class="fas fa-check"></i></span>EUR</label>
+                            <label class="label"><input type="checkbox" class="dt_urrency"><span><i class="fas fa-check"></i></span>GBP</label>
+                            <label class="label"><input type="checkbox" class="dt_urrency"><span><i class="fas fa-check"></i></span>CAD</label>
+                        </div>
+                        <hr>
+                        <div class="button">
+                            <button type="button" class="space noicon unlimited_urrency" style="display:none;">預設</button>
+                            <button type="button" class="primary">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="label right">
+                <div class="select other_select">
+                    <b>票面利率<i class="fas fa-caret-down"></i></b>
+                    <div class="popup">
+                        <div>
+                            <title>選擇票面利率</title>
+                        </div>
+                        <hr>
+                        <div class="input">
+                            <div id="slider-range1"></div>
+                            最低：<input type="phone" placeholder="2" id="f3" class="percent" maxlength="3" onkeyup="value=value.replace(/[^\d.]/g,'')"> 最高：
+                            <input type="phone" placeholder="5" id="f3_" class="percent" maxlength="3" onkeyup="value=value.replace(/[^\d.]/g,'')">
+                        </div>
+                        <hr>
+                        <div class="button">
+                            <button type="button" class="space noicon unlimited_rate" style="display:none;">預設</button>
+                            <button type="button" class="primary">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="label desktop">
+                <div class="select other_select">
+                    <b>距到期年<i class="fas fa-caret-down"></i></b>
+                    <div class="popup">
+                        <div>
+                            <title>選擇距到期年</title>
+                        </div>
+                        <hr>
+                        <div class="input">
+                            <div id="slider-range2"></div>
+                            最低：<input type="phone" placeholder="5" id="f4" class="year" maxlength="2" onkeyup="value=value.replace(/[^\d]/g,'')"> 最高：
+                            <input type="phone" placeholder="30" id="f4_" class="year" maxlength="2" onkeyup="value=value.replace(/[^\d]/g,'')">
+                        </div>
+                        <hr>
+                        <div class="button">
+                            <button type="button" class="space noicon unlimited_year" style="display:none;">預設</button>
+                            <button type="button" class="primary">確認</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="space active bg" id="more">顯示所有篩選條件<i class="fas fa-chevron-down"></i></button>
+            <div class="more">
+                <div class="label pad">
+                    <div class="select other_select">
+                        <b>距到期年<i class="fas fa-caret-down"></i></b>
+                        <div class="popup">
+                            <div>
+                                <title>選擇距到期年</title>
+                            </div>
+                            <hr>
+                            <div class="input">
+                                <div id="slider-range2_"></div>
+                                最低：<input type="phone" placeholder="5" id="f4" class="year"> 最高：
+                                <input type="phone" placeholder="30" id="f4_" class="year">
+                            </div>
+                            <hr>
+                            <div class="button">
+                                <button type="button" class="space noicon unlimited_year" style="display:none;">預設</button>
+                                <button type="button" class="primary">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="label">
+                    <div class="select other_select">
+                        <b>配息頻率<i class="fas fa-caret-down"></i></b>
+                        <div class="popup">
+                            <div>
+                                <title>選擇配息頻率</title>
+                            </div>
+                            <hr>
+                            <div class="list scrollbar">
+                                <label class="label"><input class="dt_frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>月</label>
+                                <label class="label"><input class="dt_frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>季</label>
+                                <label class="label"><input class="dt_frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>年</label>
+                                <label class="label"><input class="special_checkbox dt_frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>半年</label>
+                            </div>
+                            <div class="label special-search special_dividend">
+                                <div class="select rate_select">
+                                    <a><i class="fas fa-caret-down"></i></a>
+                                    <div class="popup">
+                                        <div class="list scrollbar">
+                                            <label class="label"><input class="dt_frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>1&7月</label>
+                                            <label class="label"><input class="dt_frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>2&8月</label>
+                                            <label class="label"><input class="dt_frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>3&9月</label>
+                                            <label class="label"><input class="dt_frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>4&10月</label>
+                                            <label class="label"><input class="dt_frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>5&11月</label>
+                                            <label class="label"><input class="dt_frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>6&12月</label>
+                                        </div>
+                                        <hr>
+                                        <div class="button">
+                                            <button type="button" class="space noicon unlimited_sub_frequency" style="display:none;">預設</button>
+                                            <button type="button" class="primary">確認</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="button">
+                                <button type="button" class="space noicon unlimited_frequency" style="display:none;">預設</button>
+                                <button type="button" class="primary">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="label">
+                    <div class="select other_select">
+                        <b>投資人身份<i class="fas fa-caret-down"></i></b>
+                        <div class="popup">
+                            <div>
+                                <title>選擇投資人身份</title>
+                            </div>
+                            <hr>
+                            <div class="list scrollbar">
+                                <label class="label half"><input type="checkbox" class="dt_identity" checked><span><i class="fas fa-check"></i></span>一般投資人</label>
+                                <label class="label half"><input type="checkbox" class="dt_identity" checked><span><i class="fas fa-check"></i></span>專業投資人</label>
+                            </div>
+                            <hr>
+                            <div class="button">
+                                <button type="button" class="space noicon unlimited_identity" style="display:none;">預設</button>
+                                <button type="button" class="primary">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="label right">
+                    <div class="select other_select">
+                        <b>產品交易面額<i class="fas fa-caret-down"></i></b>
+                        <div class="popup">
+                            <div>
+                                <title>選擇產品交易面額</title>
+                            </div>
+                            <hr>
+                            <div class="list scrollbar">
+                                <label class="label all">
+                                    <input type="checkbox" class="dt_trade" checked><span><i class="fas fa-check"></i></span>一般產品
+                                    <p>美元產品每檔最低受託面額為1萬~20萬美元，其他幣別則每檔最低受託面額與累加受託面額都不同，請詳閱中文產品說明書與條款宣告書。</p>
+                                </label>
+                                <label class="label all">
+                                    <input type="checkbox" class="dt_trade" ><span><i class="fas fa-check"></i></span>e級Bond
+                                    <p>e級Bond產品僅限定於自動化通路提供，每檔最低受託面額為5千美元。</p>
+                                </label>
+                            </div>
+                            <hr>
+                            <div class="button">
+                                <button type="button" class="space noicon unlimited_trade" style="display:none;">預設</button>
+                                <button type="button" class="primary">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="label right">
+                    <div class="select other_select">
+                        <b>最低交易面額<i class="fas fa-caret-down"></i></b>
+                        <div class="popup">
+                            <div>
+                                <title>選擇最低交易面額</title>
+                            </div>
+                            <hr>
+                            <div class="input">
+                                <div id="slider-range3"></div>
+                                最低：<input type="phone" placeholder="2" id="f7" class="money" maxlength="1" onkeyup="value=value.replace(/[^\d]/g,'')">
+                                最高：<input type="phone" placeholder="5" id="f7_" class="money" maxlength="1" onkeyup="value=value.replace(/[^\d]/g,'')">
+                            </div>
+                            <hr>
+                            <div class="button">
+                                <button type="button" class="space noicon unlimited_min_denomination" style="display:none;">預設</button>
+                                <button type="button" class="primary">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="label">
+                    <div class="select other_select">
+                        <b>參考殖利率<i class="fas fa-caret-down"></i></b>
+                        <div class="popup">
+                            <div>
+                                <title>選擇參考殖利率</title>
+                            </div>
+                            <hr>
+                            <div class="input">
+                                <div id="slider-range4"></div>
+                                最低：<input type="phone" placeholder="5" id="f8" class="percent" maxlength="4" onkeyup="value=value.replace(/[^\d.]/g,'')"> 最高：
+                                <input type="phone" placeholder="30" id="f8_" class="percent" maxlength="4" onkeyup="value=value.replace(/[^\d.]/g,'')">
+                            </div>
+                            <hr>
+                            <div class="button">
+                                <button type="button" class="space noicon unlimited_yield" style="display:none;">預設</button>
+                                <button type="button" class="primary">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="label">
+                    <div class="select other_select">
+                        <b>發行機構<i class="fas fa-caret-down"></i></b>
+                        <div class="popup">
+                            <div>
+                                <title>選擇發行機構</title>
+                                <input type="text" placeholder="請輸入關鍵字" class="search search_issued">
+                            </div>
+                            <hr>
+                            <div class="list scrollbar">
+                                <label class="label"><input class="issued dt_issued" value="印度政府1" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府1</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府2" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府2</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府3" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府3</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府4" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府4</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府5" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府5</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府6" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府6</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府7" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府7</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府8" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府8</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府9" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府9</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府0" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府10</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府11" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府11</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府12" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府12</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府13" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府13</label>
+                                <label class="label"><input class="issued dt_issued" value="印度政府14" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府14</label>
+                            </div>
+                            <hr>
+                            <div class="button">
+                                <button type="button" class="space noicon unlimited_issued" style="display:none;">預設</button>
+                                <button type="button" class="primary">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="label right">
+                    <div class="select other_select">
+                        <b>保證機構<i class="fas fa-caret-down"></i></b>
+                        <div class="popup">
+                            <div>
+                                <title>選擇保證機構</title>
+                                <input type="text" placeholder="請輸入關鍵字" class="search search_guarantee">
+                            </div>
+                            <hr>
+                            <div class="list scrollbar">
+                                <label class="label"><input class="guarantee dt_guarantee" type="checkbox" checked value="印度政府1"><span><i class="fas fa-check"></i></span>印度政府1</label>
+                                <label class="label"><input class="guarantee dt_guarantee" type="checkbox" checked value="印度政府2"><span><i class="fas fa-check"></i></span>印度政府2</label>
+                                <label class="label"><input class="guarantee dt_guarantee" type="checkbox" checked value="印度政府3"><span><i class="fas fa-check"></i></span>印度政府3</label>
+                                <label class="label"><input class="guarantee dt_guarantee" type="checkbox" checked value="印度政府4"><span><i class="fas fa-check"></i></span>印度政府4</label>
+                                <label class="label"><input class="guarantee dt_guarantee" type="checkbox" checked value="印度政府5"><span><i class="fas fa-check"></i></span>印度政府5</label>
+                                <label class="label"><input class="guarantee dt_guarantee" type="checkbox" checked value="印度政府6"><span><i class="fas fa-check"></i></span>印度政府6</label>
+                            </div>
+                            <hr>
+                            <div class="button">
+                                <button type="button" class="space noicon unlimited_guarantee" style="display:none;">預設</button>
+                                <button type="button" class="primary">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="info">
+            <strong>搜尋結果共 668 筆, 頁數 1 / 28</strong>
+            <button type="button" class="mobile">篩選條件</button>
+            <div class="right">
+                <!--<b>排序依：</b>-->
+                <div class="custom-select">
+                    <span>排序依：票面利率</span><i class="fas fa-caret-down"></i>
+                    <select id="select">
+                        <option value="排序依：票面利率">排序依：票面利率</option>
+                        <option value="排序依：到期日">排序依：到期日</option>
+                        <option value="排序依：月漲跌">排序依：月漲跌</option>
+                        <option value="排序依：最新參考市值">排序依：最新參考市值</option>
+                        <option value="排序依：投資人身分">排序依：投資人身分</option>
+                    </select>
+                </div>
+                <div class="custom-select-btn">
+                    <button id="select-btn1" class="active"></button>
+                    <button id="select-btn2"></button>
+                    <button id="select-btn3"></button>
+                    <button id="select-btn4"></button>
+                    <button id="select-btn5"></button>
+                </div>
+            </div>
+            <br clear="both">
+            <small>最新參考市值為參考贖回價格(含前手息)，月漲跌則根據此一數值計算。</small>
+        </div>
+        <div class="search-list">
+            <div>
+                <div class="detail">
+                    <label>
+                        <input type="checkbox" checked>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span>追蹤</span>
+                    </label>
+                    <div class="name">
+                        <small>CB07</small>
+                        <i>專業投資人專屬</i>
+                        <strong>A印尼政府7.75% 2038年到期固定收益債卷A印尼政府7.75% 2038年到期固定收益債卷A印尼政府7.75% 2038年到期固定收益債卷A印尼政府債券</strong>
+                    </div>
+                    <div class="data">
+                        <span>
+                            <small>發行幣別</small>
+                            USD
+                        </span>
+                        <span>
+                            <small>票面利率</small>
+                            7.4%
+                        </span>
+                        <span>
+                            <small>到期日</small>
+                            2014/05/15
+                        </span>
+                        <span>
+                            <small>配息月份</small>
+                            1&7月
+                        </span>
+                        <span class="up">
+                            <small>月漲跌</small>
+                            <i class="fas fa-caret-up"></i>3.5%
+                        </span>
+                        <span>
+                            <small>最新參考市值</small>
+                            123%
+                        </span>
+                    </div>
+                    <div class="btn">
+                        <button class="primary">申購</button>
+                        <button type="button" class="secondary">看更多</button>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="javascript:" class="sm-btn">
+                        歷史走勢 <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+                <div class="more">
+                    <div>
+                        <title>歷史走勢</title>
+                        <img src="img/chart.png">
+                        <small>走勢圖為參考贖回價格(含前手息)之歷史走勢，非本行實際成交價格，僅供參考。</small>
+                    </div>
+                    <div>
+                        <title>詳細資訊</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th colspan="2">參考價格日期：2021/04/06</th>
+                            </tr>
+                            <tr>
+                                <td>參考贖回價格(含前手息)</td>
+                                <td>112.35</td>
+                            </tr>
+                            <tr>
+                                <td>參考申購價格到期殖利率</td>
+                                <td>2.17%</td>
+                            </tr>
+                            <tr>
+                                <td>剩餘年期</td>
+                                <td>22年</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <title>最近三次參考市值</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th>參考市值日</th>
+                                <th>參考市值</th>
+                            </tr>
+                            <tr>
+                                <td>2021-01-09</td>
+                                <td>112.15%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-29</td>
+                                <td>105.02%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-09</td>
+                                <td>106.27%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" class="secondary">看更多</button>
+                </div>
+            </div>
+            <div>
+                <div class="detail">
+                    <label>
+                        <input type="checkbox" checked>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span>追蹤</span>
+                    </label>
+                    <div class="name">
+                        <small>CB07</small>
+                        <strong>AT&T2042年到期固定收益債券</strong>
+                    </div>
+                    <div class="data">
+                        <span>
+                            <small>發行幣別</small>
+                            USD
+                        </span>
+                        <span>
+                            <small>票面利率</small>
+                            7.4%
+                        </span>
+                        <span>
+                            <small>到期日</small>
+                            2014/05/15
+                        </span>
+                        <span>
+                            <small>配息月份</small>
+                            1&7月
+                        </span>
+                        <span class="up">
+                            <small>月漲跌</small>
+                            <i class="fas fa-caret-up"></i>3.5%
+                        </span>
+                        <span>
+                            <small>最新參考市值</small>
+                            123%
+                        </span>
+                    </div>
+                    <div class="btn">
+                        <button class="primary">申購</button>
+                        <button type="button" class="secondary">看更多</button>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="javascript:" class="sm-btn">
+                        歷史走勢 <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+                <div class="more">
+                    <div>
+                        <title>歷史走勢</title>
+                        <img src="img/chart.png">
+                        <small>走勢圖為參考贖回價格(含前手息)之歷史走勢，非本行實際成交價格，僅供參考。</small>
+                    </div>
+                    <div>
+                        <title>詳細資訊</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th colspan="2">參考價格日期：2021/04/06</th>
+                            </tr>
+                            <tr>
+                                <td>參考贖回價格(含前手息)</td>
+                                <td>112.35</td>
+                            </tr>
+                            <tr>
+                                <td>參考申購價格到期殖利率</td>
+                                <td>2.17%</td>
+                            </tr>
+                            <tr>
+                                <td>剩餘年期</td>
+                                <td>22年</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <title>最近三次參考市值</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th>參考市值日</th>
+                                <th>參考市值</th>
+                            </tr>
+                            <tr>
+                                <td>2021-01-09</td>
+                                <td>112.15%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-29</td>
+                                <td>105.02%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-09</td>
+                                <td>106.27%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" class="secondary">看更多</button>
+                </div>
+            </div>
+            <div>
+                <div class="detail">
+                    <label>
+                        <input type="checkbox" checked>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span>追蹤</span>
+                    </label>
+                    <div class="name">
+                        <small>CB07</small>
+                        <strong>AT&T2042年到期固定收益債券</strong>
+                    </div>
+                    <div class="data">
+                        <span>
+                            <small>發行幣別</small>
+                            USD
+                        </span>
+                        <span>
+                            <small>票面利率</small>
+                            7.4%
+                        </span>
+                        <span>
+                            <small>到期日</small>
+                            2014/05/15
+                        </span>
+                        <span>
+                            <small>配息月份</small>
+                            1&7月
+                        </span>
+                        <span class="up">
+                            <small>月漲跌</small>
+                            <i class="fas fa-caret-up"></i>3.5%
+                        </span>
+                        <span>
+                            <small>最新參考市值</small>
+                            123%
+                        </span>
+                    </div>
+                    <div class="btn">
+                        <button class="primary">申購</button>
+                        <button type="button" class="secondary">看更多</button>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="javascript:" class="sm-btn">
+                        歷史走勢 <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+                <div class="more">
+                    <div>
+                        <title>歷史走勢</title>
+                        <img src="img/chart.png">
+                        <small>走勢圖為參考贖回價格(含前手息)之歷史走勢，非本行實際成交價格，僅供參考。</small>
+                    </div>
+                    <div>
+                        <title>詳細資訊</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th colspan="2">參考價格日期：2021/04/06</th>
+                            </tr>
+                            <tr>
+                                <td>參考贖回價格(含前手息)</td>
+                                <td>112.35</td>
+                            </tr>
+                            <tr>
+                                <td>參考申購價格到期殖利率</td>
+                                <td>2.17%</td>
+                            </tr>
+                            <tr>
+                                <td>剩餘年期</td>
+                                <td>22年</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <title>最近三次參考市值</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th>參考市值日</th>
+                                <th>參考市值</th>
+                            </tr>
+                            <tr>
+                                <td>2021-01-09</td>
+                                <td>112.15%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-29</td>
+                                <td>105.02%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-09</td>
+                                <td>106.27%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" class="secondary">看更多</button>
+                </div>
+            </div>
+            <div>
+                <div class="detail">
+                    <label>
+                        <input type="checkbox" checked>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span>追蹤</span>
+                    </label>
+                    <div class="name">
+                        <small>CB07</small>
+                        <strong>AT&T2042年到期固定收益債券</strong>
+                    </div>
+                    <div class="data">
+                        <span>
+                            <small>發行幣別</small>
+                            USD
+                        </span>
+                        <span>
+                            <small>票面利率</small>
+                            7.4%
+                        </span>
+                        <span>
+                            <small>到期日</small>
+                            2014/05/15
+                        </span>
+                        <span>
+                            <small>配息月份</small>
+                            1&7月
+                        </span>
+                        <span class="up">
+                            <small>月漲跌</small>
+                            <i class="fas fa-caret-up"></i>3.5%
+                        </span>
+                        <span>
+                            <small>最新參考市值</small>
+                            123%
+                        </span>
+                    </div>
+                    <div class="btn">
+                        <button class="primary">申購</button>
+                        <button type="button" class="secondary">看更多</button>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="javascript:" class="sm-btn">
+                        歷史走勢 <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+                <div class="more">
+                    <div>
+                        <title>歷史走勢</title>
+                        <img src="img/chart.png">
+                        <small>走勢圖為參考贖回價格(含前手息)之歷史走勢，非本行實際成交價格，僅供參考。</small>
+                    </div>
+                    <div>
+                        <title>詳細資訊</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th colspan="2">參考價格日期：2021/04/06</th>
+                            </tr>
+                            <tr>
+                                <td>參考贖回價格(含前手息)</td>
+                                <td>112.35</td>
+                            </tr>
+                            <tr>
+                                <td>參考申購價格到期殖利率</td>
+                                <td>2.17%</td>
+                            </tr>
+                            <tr>
+                                <td>剩餘年期</td>
+                                <td>22年</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <title>最近三次參考市值</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th>參考市值日</th>
+                                <th>參考市值</th>
+                            </tr>
+                            <tr>
+                                <td>2021-01-09</td>
+                                <td>112.15%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-29</td>
+                                <td>105.02%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-09</td>
+                                <td>106.27%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" class="secondary">看更多</button>
+                </div>
+            </div>
+            <div>
+                <div class="detail">
+                    <label>
+                        <input type="checkbox" checked>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span>追蹤</span>
+                    </label>
+                    <div class="name">
+                        <small>CB07</small>
+                        <strong>AT&T2042年到期固定收益債券</strong>
+                    </div>
+                    <div class="data">
+                        <span>
+                            <small>發行幣別</small>
+                            USD
+                        </span>
+                        <span>
+                            <small>票面利率</small>
+                            7.4%
+                        </span>
+                        <span>
+                            <small>到期日</small>
+                            2014/05/15
+                        </span>
+                        <span>
+                            <small>配息月份</small>
+                            1&7月
+                        </span>
+                        <span class="up">
+                            <small>月漲跌</small>
+                            <i class="fas fa-caret-up"></i>3.5%
+                        </span>
+                        <span>
+                            <small>最新參考市值</small>
+                            123%
+                        </span>
+                    </div>
+                    <div class="btn">
+                        <button class="primary">申購</button>
+                        <button type="button" class="secondary">看更多</button>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="javascript:" class="sm-btn">
+                        歷史走勢 <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+                <div class="more">
+                    <div>
+                        <title>歷史走勢</title>
+                        <img src="img/chart.png">
+                        <small>走勢圖為參考贖回價格(含前手息)之歷史走勢，非本行實際成交價格，僅供參考。</small>
+                    </div>
+                    <div>
+                        <title>詳細資訊</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th colspan="2">參考價格日期：2021/04/06</th>
+                            </tr>
+                            <tr>
+                                <td>參考贖回價格(含前手息)</td>
+                                <td>112.35</td>
+                            </tr>
+                            <tr>
+                                <td>參考申購價格到期殖利率</td>
+                                <td>2.17%</td>
+                            </tr>
+                            <tr>
+                                <td>剩餘年期</td>
+                                <td>22年</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <title>最近三次參考市值</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th>參考市值日</th>
+                                <th>參考市值</th>
+                            </tr>
+                            <tr>
+                                <td>2021-01-09</td>
+                                <td>112.15%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-29</td>
+                                <td>105.02%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-09</td>
+                                <td>106.27%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" class="secondary">看更多</button>
+                </div>
+            </div>
+            <div>
+                <div class="detail">
+                    <label>
+                        <input type="checkbox" checked>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span>追蹤</span>
+                    </label>
+                    <div class="name">
+                        <small>CB07</small>
+                        <strong>AT&T2042年到期固定收益債券</strong>
+                    </div>
+                    <div class="data">
+                        <span>
+                            <small>發行幣別</small>
+                            USD
+                        </span>
+                        <span>
+                            <small>票面利率</small>
+                            7.4%
+                        </span>
+                        <span>
+                            <small>到期日</small>
+                            2014/05/15
+                        </span>
+                        <span>
+                            <small>配息月份</small>
+                            1&7月
+                        </span>
+                        <span class="up">
+                            <small>月漲跌</small>
+                            <i class="fas fa-caret-up"></i>3.5%
+                        </span>
+                        <span>
+                            <small>最新參考市值</small>
+                            123%
+                        </span>
+                    </div>
+                    <div class="btn">
+                        <button class="primary">申購</button>
+                        <button type="button" class="secondary">看更多</button>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="javascript:" class="sm-btn">
+                        歷史走勢 <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+                <div class="more">
+                    <div>
+                        <title>歷史走勢</title>
+                        <img src="img/chart.png">
+                        <small>走勢圖為參考贖回價格(含前手息)之歷史走勢，非本行實際成交價格，僅供參考。</small>
+                    </div>
+                    <div>
+                        <title>詳細資訊</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th colspan="2">參考價格日期：2021/04/06</th>
+                            </tr>
+                            <tr>
+                                <td>參考贖回價格(含前手息)</td>
+                                <td>112.35</td>
+                            </tr>
+                            <tr>
+                                <td>參考申購價格到期殖利率</td>
+                                <td>2.17%</td>
+                            </tr>
+                            <tr>
+                                <td>剩餘年期</td>
+                                <td>22年</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <title>最近三次參考市值</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th>參考市值日</th>
+                                <th>參考市值</th>
+                            </tr>
+                            <tr>
+                                <td>2021-01-09</td>
+                                <td>112.15%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-29</td>
+                                <td>105.02%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-09</td>
+                                <td>106.27%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" class="secondary">看更多</button>
+                </div>
+            </div>
+            <div>
+                <div class="detail">
+                    <label>
+                        <input type="checkbox" checked>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span>追蹤</span>
+                    </label>
+                    <div class="name">
+                        <small>CB07</small>
+                        <strong>AT&T2042年到期固定收益債券</strong>
+                    </div>
+                    <div class="data">
+                        <span>
+                            <small>發行幣別</small>
+                            USD
+                        </span>
+                        <span>
+                            <small>票面利率</small>
+                            7.4%
+                        </span>
+                        <span>
+                            <small>到期日</small>
+                            2014/05/15
+                        </span>
+                        <span>
+                            <small>配息月份</small>
+                            1&7月
+                        </span>
+                        <span class="up">
+                            <small>月漲跌</small>
+                            <i class="fas fa-caret-up"></i>3.5%
+                        </span>
+                        <span>
+                            <small>最新參考市值</small>
+                            123%
+                        </span>
+                    </div>
+                    <div class="btn">
+                        <button class="primary">申購</button>
+                        <button type="button" class="secondary">看更多</button>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="javascript:" class="sm-btn">
+                        歷史走勢 <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+                <div class="more">
+                    <div>
+                        <title>歷史走勢</title>
+                        <img src="img/chart.png">
+                        <small>走勢圖為參考贖回價格(含前手息)之歷史走勢，非本行實際成交價格，僅供參考。</small>
+                    </div>
+                    <div>
+                        <title>詳細資訊</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th colspan="2">參考價格日期：2021/04/06</th>
+                            </tr>
+                            <tr>
+                                <td>參考贖回價格(含前手息)</td>
+                                <td>112.35</td>
+                            </tr>
+                            <tr>
+                                <td>參考申購價格到期殖利率</td>
+                                <td>2.17%</td>
+                            </tr>
+                            <tr>
+                                <td>剩餘年期</td>
+                                <td>22年</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <title>最近三次參考市值</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th>參考市值日</th>
+                                <th>參考市值</th>
+                            </tr>
+                            <tr>
+                                <td>2021-01-09</td>
+                                <td>112.15%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-29</td>
+                                <td>105.02%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-09</td>
+                                <td>106.27%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" class="secondary">看更多</button>
+                </div>
+            </div>
+            <div>
+                <div class="detail">
+                    <label>
+                        <input type="checkbox" checked>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span>追蹤</span>
+                    </label>
+                    <div class="name">
+                        <small>CB07</small>
+                        <strong>AT&T2042年到期固定收益債券</strong>
+                    </div>
+                    <div class="data">
+                        <span>
+                            <small>發行幣別</small>
+                            USD
+                        </span>
+                        <span>
+                            <small>票面利率</small>
+                            7.4%
+                        </span>
+                        <span>
+                            <small>到期日</small>
+                            2014/05/15
+                        </span>
+                        <span>
+                            <small>配息月份</small>
+                            1&7月
+                        </span>
+                        <span class="up">
+                            <small>月漲跌</small>
+                            <i class="fas fa-caret-up"></i>3.5%
+                        </span>
+                        <span>
+                            <small>最新參考市值</small>
+                            123%
+                        </span>
+                    </div>
+                    <div class="btn">
+                        <button class="primary">申購</button>
+                        <button type="button" class="secondary">看更多</button>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="javascript:" class="sm-btn">
+                        歷史走勢 <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+                <div class="more">
+                    <div>
+                        <title>歷史走勢</title>
+                        <img src="img/chart.png">
+                        <small>走勢圖為參考贖回價格(含前手息)之歷史走勢，非本行實際成交價格，僅供參考。</small>
+                    </div>
+                    <div>
+                        <title>詳細資訊</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th colspan="2">參考價格日期：2021/04/06</th>
+                            </tr>
+                            <tr>
+                                <td>參考贖回價格(含前手息)</td>
+                                <td>112.35</td>
+                            </tr>
+                            <tr>
+                                <td>參考申購價格到期殖利率</td>
+                                <td>2.17%</td>
+                            </tr>
+                            <tr>
+                                <td>剩餘年期</td>
+                                <td>22年</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <title>最近三次參考市值</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th>參考市值日</th>
+                                <th>參考市值</th>
+                            </tr>
+                            <tr>
+                                <td>2021-01-09</td>
+                                <td>112.15%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-29</td>
+                                <td>105.02%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-09</td>
+                                <td>106.27%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" class="secondary">看更多</button>
+                </div>
+            </div>
+            <div>
+                <div class="detail">
+                    <label>
+                        <input type="checkbox" checked>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span>追蹤</span>
+                    </label>
+                    <div class="name">
+                        <small>CB07</small>
+                        <strong>AT&T2042年到期固定收益債券</strong>
+                    </div>
+                    <div class="data">
+                        <span>
+                            <small>發行幣別</small>
+                            USD
+                        </span>
+                        <span>
+                            <small>票面利率</small>
+                            7.4%
+                        </span>
+                        <span>
+                            <small>到期日</small>
+                            2014/05/15
+                        </span>
+                        <span>
+                            <small>配息月份</small>
+                            1&7月
+                        </span>
+                        <span class="up">
+                            <small>月漲跌</small>
+                            <i class="fas fa-caret-up"></i>3.5%
+                        </span>
+                        <span>
+                            <small>最新參考市值</small>
+                            123%
+                        </span>
+                    </div>
+                    <div class="btn">
+                        <button class="primary">申購</button>
+                        <button type="button" class="secondary">看更多</button>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="javascript:" class="sm-btn">
+                        歷史走勢 <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+                <div class="more">
+                    <div>
+                        <title>歷史走勢</title>
+                        <img src="img/chart.png">
+                        <small>走勢圖為參考贖回價格(含前手息)之歷史走勢，非本行實際成交價格，僅供參考。</small>
+                    </div>
+                    <div>
+                        <title>詳細資訊</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th colspan="2">參考價格日期：2021/04/06</th>
+                            </tr>
+                            <tr>
+                                <td>參考贖回價格(含前手息)</td>
+                                <td>112.35</td>
+                            </tr>
+                            <tr>
+                                <td>參考申購價格到期殖利率</td>
+                                <td>2.17%</td>
+                            </tr>
+                            <tr>
+                                <td>剩餘年期</td>
+                                <td>22年</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <title>最近三次參考市值</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th>參考市值日</th>
+                                <th>參考市值</th>
+                            </tr>
+                            <tr>
+                                <td>2021-01-09</td>
+                                <td>112.15%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-29</td>
+                                <td>105.02%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-09</td>
+                                <td>106.27%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" class="secondary">看更多</button>
+                </div>
+            </div>
+            <div>
+                <div class="detail">
+                    <label>
+                        <input type="checkbox" checked>
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-heart"></i>
+                        <span>追蹤</span>
+                    </label>
+                    <div class="name">
+                        <small>CB07</small>
+                        <strong>AT&T2042年到期固定收益債券</strong>
+                    </div>
+                    <div class="data">
+                        <span>
+                            <small>發行幣別</small>
+                            USD
+                        </span>
+                        <span>
+                            <small>票面利率</small>
+                            7.4%
+                        </span>
+                        <span>
+                            <small>到期日</small>
+                            2014/05/15
+                        </span>
+                        <span>
+                            <small>配息月份</small>
+                            1&7月
+                        </span>
+                        <span class="up">
+                            <small>月漲跌</small>
+                            <i class="fas fa-caret-up"></i>3.5%
+                        </span>
+                        <span>
+                            <small>最新參考市值</small>
+                            123%
+                        </span>
+                    </div>
+                    <div class="btn">
+                        <button class="primary">申購</button>
+                        <button type="button" class="secondary">看更多</button>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <a href="javascript:" class="sm-btn">
+                        歷史走勢 <i class="fas fa-caret-down"></i>
+                    </a>
+                </div>
+                <div class="more">
+                    <div>
+                        <title>歷史走勢</title>
+                        <img src="img/chart.png">
+                        <small>走勢圖為參考贖回價格(含前手息)之歷史走勢，非本行實際成交價格，僅供參考。</small>
+                    </div>
+                    <div>
+                        <title>詳細資訊</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th colspan="2">參考價格日期：2021/04/06</th>
+                            </tr>
+                            <tr>
+                                <td>參考贖回價格(含前手息)</td>
+                                <td>112.35</td>
+                            </tr>
+                            <tr>
+                                <td>參考申購價格到期殖利率</td>
+                                <td>2.17%</td>
+                            </tr>
+                            <tr>
+                                <td>剩餘年期</td>
+                                <td>22年</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <title>最近三次參考市值</title>
+                        <table cellspacing="0" border="0">
+                            <tr>
+                                <th>參考市值日</th>
+                                <th>參考市值</th>
+                            </tr>
+                            <tr>
+                                <td>2021-01-09</td>
+                                <td>112.15%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-29</td>
+                                <td>105.02%</td>
+                            </tr>
+                            <tr>
+                                <td>2021-12-09</td>
+                                <td>106.27%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="button" class="secondary">看更多</button>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <span><i class="fas fa-chevron-left"></i></span>
+            <a href="" class="active">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a> ...
+            <a href="">10</a>
+            <a href=""><i class="fas fa-chevron-right"></i></a>
+        </div>
+        <form class="form mobile">
+            <div class="title">
+                篩選條件設定
+                <img src="img/close-icon.png">
+            </div>
+            <div class="item scrollbar">
+                <fieldset class="close">
+                    <label for="f1">關鍵字</label>
+                    <div class="label close">
+                        <div class="select other_select without_move">
+                            <b>固定收益債券<i class="fas fa-times"></i></b>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label for="f2">發行幣別</label>
+                    <div class="input">
+                        <label class="label"><input class="urrency" type="checkbox" checked><span><i class="fas fa-check"></i></span>USD</label>
+                        <label class="label"><input class="urrency" type="checkbox" checked><span><i class="fas fa-check"></i></span>AUD</label>
+                        <label class="label"><input class="urrency" type="checkbox" checked><span><i class="fas fa-check"></i></span>ZAR</label>
+                        <label class="label"><input class="urrency" type="checkbox" checked><span><i class="fas fa-check"></i></span>CNH</label>
+                        <label class="label desktop pad"><input class="urrency" type="checkbox"><span><i class="fas fa-check"></i></span>NZD</label>
+                        <label class="label desktop pad"><input class="urrency" type="checkbox"><span><i class="fas fa-check"></i></span>EUR</label>
+                        <label class="label desktop pad"><input class="urrency" type="checkbox"><span><i class="fas fa-check"></i></span>GBP</label>
+                        <label class="label desktop pad"><input class="urrency" type="checkbox"><span><i class="fas fa-check"></i></span>CAD</label>
+                        <a class="mobile urrency_open">選項<i class="fas fa-caret-down"></i></a>
+                    </div>
+                    <div class="filter">
+                        <button type="button" class="space noicon gray ">預設</button>
+                        <button type="button" class="space noicon unlimited_urrency" style="display:none;">預設</button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label for="f3">票面利率</label>
+                    <div class="input">
+                        <div id="slider-range0_1"></div>
+                        最低：<input type="phone" placeholder="2" id="f3" class="percent"> 最高：
+                        <input type="phone" placeholder="5" id="f3_" class="percent">
+                    </div>
+                    <div class="filter">
+                        <button type="button" class="space noicon gray ">預設</button>
+                        <button type="button" class="space noicon unlimited_rate" style="display:none;">預設</button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <label for="f4">距到期年</label>
+                    <div class="input">
+                        <div id="slider-range0_2"></div>
+                        最低：<input type="phone" placeholder="5" id="f4" class="year"> 最高：
+                        <input type="phone" placeholder="30" id="f4_" class="year">
+                    </div>
+                    <div class="filter">
+                        <button type="button" class="space noicon gray ">預設</button>
+                        <button type="button" class="space noicon unlimited_year" style="display:none;">預設</button>
+                    </div>
+                </fieldset>
+                <div class="more">
+                    <fieldset>
+                        <label for="f5">配息頻率</label>
+                        <div class="input special">
+                            <label class="label"><input class="frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>月</label>
+                            <label class="label"><input class="frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>季</label>
+                            <label class="label"><input class="frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>年</label>
+                            <label class="label"><input type="checkbox" class="frequency special_m_checkbox" checked><span><i class="fas fa-check"></i></span><b class="mobile">半年</b></label>
+                            <div class="label special">
+                                <div class="select rate_select special_m_dividend ">
+                                    <b class="mobile">展開細項<i class="fas fa-caret-down"></i></b>
+                                    <div class="popup">
+                                        <div class="list scrollbar">
+                                            <label class="label"><input class="frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>1&7月</label>
+                                            <label class="label"><input class="frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>2&8月</label>
+                                            <label class="label"><input class="frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>3&9月</label>
+                                            <label class="label"><input class="frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>4&10月</label>
+                                            <label class="label"><input class="frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>5&11月</label>
+                                            <label class="label"><input class="frequency" type="checkbox" checked><span><i class="fas fa-check"></i></span>6&12月</label>
+                                        </div>
+                                        <hr>
+                                        <div class="button">
+                                            <button type="button" class="space noicon" style="display:none;">預設</button>
+                                            <button type="button" class="primary">確認</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter">
+                            <button type="button" class="space noicon gray ">預設</button>
+                            <button type="button" class="space noicon unlimited_frequency" style="display:none;">預設</button>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="f6">投資人身份</label>
+                        <div class="input">
+                            <label class="label"><input type="checkbox" class="identity" checked><span><i class="fas fa-check"></i></span>一般投資人</label>
+                            <label class="label"><input type="checkbox" class="identity" checked><span><i class="fas fa-check"></i></span>專業投資人</label>
+                        </div>
+                        <div class="filter">
+                            <button type="button" class="space noicon gray ">預設</button>
+                            <button type="button" class="space noicon unlimited_identity" style="display:none;">預設</button>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="f7">產品交易面額</label>
+                        <div class="input">
+                            <label class="label half">
+                                <input type="checkbox" class="trade" checked><span><i class="fas fa-check"></i></span>一般產品
+                                <p>美元產品每檔最低受託面額為1萬~20萬美元，其他幣別則每檔最低受託面額與累加受託面額都不同，請詳閱中文產品說明書與條款宣告書。</p>
+                            </label>
+                            <label class="label half">
+                                <input type="checkbox" class="trade" ><span><i class="fas fa-check"></i></span>e級bond
+                                <p>e級Bond產品僅限定於自動化通路提供，每檔最低受託面額為5千美元。</p>
+                            </label>
+                        </div>
+                        <div class="filter">
+                            <button type="button" class="space noicon gray ">預設</button>
+                            <button type="button" class="space noicon unlimited_trade" style="display:none;">預設</button>
+                        </div>
+                    </fieldset>
+                    <!--<fieldset>
+                        <label for="f7">最低交易面額</label>
+                        <div class="input">
+                            <div id="slider-range0_3"></div>
+                            最低：<input type="phone" placeholder="2" id="f7" class="money">
+                            最高：<input type="phone" placeholder="5" id="f7_" class="money">
+                        </div>
+                        <div class="filter">
+                            <button type="button" class="space noicon gray ">預設</button>
+                            <button type="button" class="space noicon unlimited_min_denomination" style="display:none;">預設</button>
+                        </div>
+                    </fieldset>-->
+                    <fieldset>
+                        <label for="f8">參考殖利率</label>
+                        <div class="input">
+                            <div id="slider-range0_4"></div>
+                            最低：<input type="phone" placeholder="5" id="f8" class="percent"> 最高：
+                            <input type="phone" placeholder="30" id="f8_" class="percent">
+                        </div>
+                        <div class="filter">
+                            <button type="button" class="space noicon gray ">預設</button>
+                            <button type="button" class="space noicon unlimited_yield" style="display:none;">預設</button>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="f9">發行機構</label>
+                        <div class="input">
+                            <div class="label">
+                                <div class="select other_select">
+                                    <b>發行機構<i class="fas fa-caret-down"></i></b>
+                                    <div class="popup">
+                                        <div>
+                                            <title>選擇發行機構</title>
+                                            <input type="text" placeholder="請輸入關鍵字" class="search search_issued">
+                                        </div>
+                                        <hr>
+                                        <div class="list scrollbar">
+                                            <label class="label"><input class="issued" value="印度政府1" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府1</label>
+                                            <label class="label"><input class="issued" value="印度政府2" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府2</label>
+                                            <label class="label"><input class="issued" value="印度政府3" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府3</label>
+                                            <label class="label"><input class="issued" value="印度政府4" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府4</label>
+                                            <label class="label"><input class="issued" value="印度政府5" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府5</label>
+                                            <label class="label"><input class="issued" value="印度政府6" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府6</label>
+                                            <label class="label"><input class="issued" value="印度政府7" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府7</label>
+                                            <label class="label"><input class="issued" value="印度政府8" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府8</label>
+                                            <label class="label"><input class="issued" value="印度政府9" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府9</label>
+                                            <label class="label"><input class="issued" value="印度政府0" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府10</label>
+                                            <label class="label"><input class="issued" value="印度政府11" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府11</label>
+                                            <label class="label"><input class="issued" value="印度政府12" type="checkbox" checked><span><i class="fas fa-check"></i></span>印度政府12</label>
+                                        </div>
+                                        <hr>
+                                        <div class="button">
+                                            <button type="button" class="space noicon unlimited_issued" style="display:none;">預設</button>
+                                            <button type="button" class="primary">確認</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter">
+                            <button type="button" class="space noicon gray">預設</button>
+                            <button type="button" class="space noicon  unlimited_issued" style="display:none;">預設</button>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="f10">保證機構</label>
+                        <div class="input">
+                            <div class="label">
+                                <div class="select other_select">
+                                    <b>保證機構<i class="fas fa-caret-down"></i></b>
+                                    <div class="popup">
+                                        <div>
+                                            <title>選擇保證機構</title>
+                                            <input type="text" placeholder="請輸入關鍵字" class="search search_guarantee">
+                                        </div>
+                                        <hr>
+                                        <div class="list scrollbar">
+                                            <label class="label"><input class="guarantee" type="checkbox" checked value="印度政府1"><span><i class="fas fa-check"></i></span>印度政府1</label>
+                                            <label class="label"><input class="guarantee" type="checkbox" checked value="印度政府2"><span><i class="fas fa-check"></i></span>印度政府2</label>
+                                            <label class="label"><input class="guarantee" type="checkbox" checked value="印度政府3"><span><i class="fas fa-check"></i></span>印度政府3</label>
+                                            <label class="label"><input class="guarantee" type="checkbox" checked value="印度政府4"><span><i class="fas fa-check"></i></span>印度政府4</label>
+                                            <label class="label"><input class="guarantee" type="checkbox" checked value="印度政府5"><span><i class="fas fa-check"></i></span>印度政府5</label>
+                                            <label class="label"><input class="guarantee" type="checkbox" checked value="印度政府6"><span><i class="fas fa-check"></i></span>印度政府6</label>
+                                        </div>
+                                        <hr>
+                                        <div class="button">
+                                            <button type="button" class="space noicon unlimited_guarantee" style="display:none;">預設</button>
+                                            <button type="button" class="primary">確認</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter">
+                            <button type="button" class="space noicon gray">預設</button>
+                            <button type="button" class="space noicon unlimited_guarantee" style="display:none;">預設</button>
+                        </div>
+                    </fieldset>
+                </div>
+                <fieldset>
+                    <button type="button" class="space" id="more">進階篩選條件<i class="fas fa-chevron-down"></i></button>
+                </fieldset>
+            </div>
+            <div class="foot"><button type="button" class="primary" style="width: 190px;padding: 0;">顯示1278檔搜尋結果</button></div>
+        </form>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/1aa0071f31.js" crossorigin="anonymous"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/search.js"></script>
+
+</html>

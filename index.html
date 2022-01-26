@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>i理財 - 台新銀行</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--Mobile Only -->
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="i理財">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="台新銀行">
+    <meta property="og:image" content="img/fbshare.png">
+    <meta property="og:url" content="">
+    <!--Mobile Only -->
+    <link rel="shortcut icon" href="https://www.taishinbank.com.tw/TSB/system/modules/com.thesys.project.TSB/resources/img/favicon.ico?v=2">
+    <link rel="canonical" href="">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top">
+            <h1>產品總覽</h1>
+            <div class="list">
+                <a href="javascript:" id="dropdown">海外債券<i class="fas fa-caret-down"></i></a>
+                <div class="box">
+                    <div>
+                        <strong>信託專區</strong>
+                        <ul>
+                            <li><a href="">基金</a></li>
+                            <li class="active"><a href="">海外債券</a></li>
+                            <li><a href="">境外結構型商品</a></li>
+                            <li><a href="">集合管理運用帳戶</a></li>
+                            <li><a href="">ETF</a></li>
+                            <li><a href="">外國股票</a></li>
+                            <li><a href="">其他外國有價證券</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong>更多理財商品</strong>
+                        <ul>
+                            <li><a href="">黃金</a></li>
+                            <li><a href="">境內結構型商品</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="control">
+                <h2>海外債券產品篩選條件</h2>
+                <button type="button" onclick="javascript:location.href='list.html'" class="primary"><i class="fas fa-heart"></i>我的觀察海外債券</button>
+            </div>
+            <form class="form">
+                <div class="alert open" id="alert">
+                    <div>
+                        <div class="head">
+                            產品報價注意事項
+                        </div>
+                        <div class="text scrollbar">
+                            <p><b>查看搜尋結果前，請您閱讀並同意以下注意事項：</b></p>
+                            <ul>
+                                <li>注意事項一注意事項一注意事項一注意事項一注意事項一注意事項一</li>
+                                <li>注意事項二注意事項二注意事項二注意事項二注意事項二</li>
+                                <li>注意事項三注意事項三注意事項三注意事項三注意事項三</li>
+                                <li>注意事項一注意事項一注意事項一注意事項一注意事項一注意事項一</li>
+                                <li>注意事項二注意事項二注意事項二注意事項二注意事項二</li>
+                                <li>注意事項三注意事項三注意事項三注意事項三注意事項三</li>
+                                <li>注意事項一注意事項一注意事項一注意事項一注意事項一注意事項一</li>
+                                <li>注意事項二注意事項二注意事項二注意事項二注意事項二</li>
+                                <li>注意事項三注意事項三注意事項三注意事項三注意事項三</li>
+                            </ul>
+                        </div>
+                        <button class="primary" type="button">我同意</button>
+                    </div>
+                </div>
+                <div class="item">
+
+                    <fieldset>
+                        <label for="f1">產品關鍵字</label>
+                        <div class="input"><input type="text" class="keyword" placeholder="請輸入海外債券產品關鍵字" id="f1"></div>
+                        <div class="filter">
+                            <button type="button" class="space noicon gray ">預設</button>
+                            <button type="button" class="space noicon unlimited_keyword">預設</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="f2">發行幣別</label>
+                        <div class="input">
+                            <label class="label"><input type="checkbox" class="urrency" value="USD" checked><span><i class="fas fa-check "></i></span>USD</label>
+                            <label class="label"><input type="checkbox" class="urrency" value="AUD" checked><span><i class="fas fa-check "></i></span>AUD</label>
+                            <label class="label"><input type="checkbox" class="urrency" value="ZAR" checked><span><i class="fas fa-check "></i></span>ZAR</label>
+                            <label class="label"><input type="checkbox" class="urrency" value="CNH" checked><span><i class="fas fa-check "></i></span>CNH</label>
+                            <label class="label desktop pad"><input type="checkbox" class="urrency" value="NZD"><span><i class="fas fa-check "></i></span>NZD</label>
+                            <label class="label desktop pad"><input type="checkbox" class="urrency" value="EUR"><span><i class="fas fa-check "></i></span>EUR</label>
+                            <label class="label desktop pad"><input type="checkbox" class="urrency" value="GBP"><span><i class="fas fa-check "></i></span>GBP</label>
+                            <label class="label desktop pad"><input type="checkbox" class="urrency" value="CAD"><span><i class="fas fa-check "></i></span>CAD</label>
+                            <a class="mobile urrency_open">選項<i class="fas fa-caret-down"></i></a>
+                        </div>
+                        <div class="filter">
+                            <button type="button" class="space noicon gray">預設</button>
+                            <button type="button" class="space noicon unlimited_urrency">預設</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="f3">票面利率</label>
+                        <div class="input">
+                            <div id="slider-range1"></div>
+                            最低：<input type="phone" placeholder="2" id="f3" class="percent" maxlength="3" onkeyup="value=value.replace(/[^\d.]/g,'')"> 最高：
+                            <input type="phone" placeholder="5" id="f3_" class="percent" maxlength="3" onkeyup="value=value.replace(/[^\d.]/g,'')">
+                        </div>
+                        <div class="filter">
+                            <button type="button" class="space noicon gray">預設</button>
+                            <button type="button" class="space noicon unlimited_rate">預設</button>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="f4">距到期年</label>
+                        <div class="input">
+                            <div id="slider-range2"></div>
+                            最低：<input type="phone" placeholder="5" id="f4" class="year" maxlength="2" onkeyup="value=value.replace(/[^\d]/g,'')"> 最高：
+                            <input type="phone" placeholder="30" id="f4_" class="year" maxlength="2" onkeyup="value=value.replace(/[^\d]/g,'')">
+                        </div>
+                        <div class="filter">
+                            <button type="button" class="space noicon gray ">預設</button>
+                            <button type="button" class="space noicon unlimited_year">預設</button>
+                        </div>
+                    </fieldset>
+
+                    <div class="more">
+                        <fieldset>
+                            <label for="f5">配息頻率</label>
+                            <div class="input special">
+                                <label class="label"><input type="checkbox" class="frequency" data-frequency="月" checked><span><i class="fas fa-check"></i></span>月</label>
+                                <label class="label"><input type="checkbox" class="frequency" data-frequency="季" checked><span><i class="fas fa-check"></i></span>季</label>
+                                <label class="label"><input type="checkbox" class="frequency" data-frequency="年" checked><span><i class="fas fa-check"></i></span>年</label>
+                                <label class="label"><input type="checkbox" class="frequency special_checkbox" checked><span><i class="fas fa-check"></i></span><b class="mobile">半年</b></label>
+                                <div class="label special special_dividend">
+                                    <div class="select without_move">
+                                        <b class="desktop pad">半年<i class="fas fa-caret-down"></i></b>
+                                        <b class="mobile">展開細項<i class="fas fa-caret-down"></i></b>
+                                        <div class="popup">
+                                            <div class="list scrollbar">
+                                                <label class="label"><input type="checkbox" class="frequency sub_frequency" data-frequency="1&7月" checked><span><i class="fas fa-check"></i></span>1&7月</label>
+                                                <label class="label"><input type="checkbox" class="frequency sub_frequency" data-frequency="2&8月" checked><span><i class="fas fa-check"></i></span>2&8月</label>
+                                                <label class="label"><input type="checkbox" class="frequency sub_frequency" data-frequency="3&9月" checked><span><i class="fas fa-check"></i></span>3&9月</label>
+                                                <label class="label"><input type="checkbox" class="frequency sub_frequency" data-frequency="4&10月" checked><span><i class="fas fa-check"></i></span>4&10月</label>
+                                                <label class="label"><input type="checkbox" class="frequency sub_frequency" data-frequency="5&11月" checked><span><i class="fas fa-check"></i></span>5&11月</label>
+                                                <label class="label"><input type="checkbox" class="frequency sub_frequency" data-frequency="6&12月" checked><span><i class="fas fa-check"></i></span>6&12月</label>
+                                            </div>
+                                            <hr>
+                                            <div class="button">
+                                                <button type="button" class="space noicon unlimited_sub_frequency">預設</button>
+                                                <button type="button" class="primary">確認</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter">
+                                <button type="button" class="space noicon gray">預設</button>
+                                <button type="button" class="space noicon unlimited_frequency">預設</button>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for="f6">投資人身份</label>
+                            <div class="input">
+                                <label class="label"><input type="checkbox" class="identity" checked><span><i class="fas fa-check"></i></span>一般投資人</label>
+                                <label class="label"><input type="checkbox" class="identity" checked><span><i class="fas fa-check"></i></span>專業投資人</label>
+                            </div>
+                            <div class="filter">
+                                <button type="button" class="space noicon gray ">預設</button>
+                                <button type="button" class="space noicon unlimited_identity">預設</button>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for="f7">產品交易面額</label>
+                            <div class="input">
+                                <label class="label half">
+                                    <input type="checkbox" class="trade" checked><span><i class="fas fa-check"></i></span>一般產品
+                                    <p>美元產品每檔最低受託面額為1萬~20萬美元，其他幣別則每檔最低受託面額與累加受託面額都不同，請詳閱中文產品說明書與條款宣告書。</p>
+                                </label>
+                                <label class="label half">
+                                    <input type="checkbox" class="trade"><span><i class="fas fa-check"></i></span>e級Bond
+                                    <p>e級Bond產品僅限定於自動化通路提供，每檔最低受託面額為5千美元。</p>
+                                </label>
+                            </div>
+                            <div class="filter">
+                                <button type="button" class="space noicon gray ">預設</button>
+                                <button type="button" class="space noicon unlimited_trade">預設</button>
+                            </div>
+                        </fieldset>
+                        <!--<fieldset>
+                            <label for="f7">最低交易面額</label>
+                            <div class="input">
+                                <div id="slider-range3"></div>
+                                最低：<input type="phone" placeholder="2" id="f7" class="money" maxlength="1" onkeyup="value=value.replace(/[^\d]/g,'')">
+                                最高：<input type="phone" placeholder="5" id="f7_" class="money" maxlength="1" onkeyup="value=value.replace(/[^\d]/g,'')">
+                            </div>
+                            <div class="filter">
+                                <button type="button" class="space noicon gray">預設</button>
+                                <button type="button" class="space noicon unlimited_min_denomination">預設</button>
+                            </div>
+                        </fieldset>-->
+                        <fieldset>
+                            <label for="f8">參考殖利率</label>
+                            <div class="input">
+                                <div id="slider-range4"></div>
+                                最低：<input type="phone" placeholder="5" id="f8" class="percent" maxlength="4" onkeyup="value=value.replace(/[^\d.]/g,'')"> 最高：
+                                <input type="phone" placeholder="30" id="f8_" class="percent" maxlength="4" onkeyup="value=value.replace(/[^\d.]/g,'')">
+                            </div>
+                            <div class="filter">
+                                <button type="button" class="space noicon gray">預設</button>
+                                <button type="button" class="space noicon unlimited_yield">預設</button>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for="f9">發行機構</label>
+                            <div class="input">
+                                <div class="label">
+                                    <div class="select other_select">
+                                        <b>發行機構<i class="fas fa-caret-down"></i></b>
+                                        <div class="popup">
+                                            <div>
+                                                <title>選擇發行機構</title>
+                                                <input type="text" placeholder="請輸入關鍵字" class="search search_issued">
+                                            </div>
+                                            <hr>
+                                            <div class="list scrollbar">
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府1" checked><span><i class="fas fa-check"></i></span>印度政府1</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府2" checked><span><i class="fas fa-check"></i></span>印度政府2</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府3" checked><span><i class="fas fa-check"></i></span>印度政府3</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府4" checked><span><i class="fas fa-check"></i></span>印度政府4</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府5" checked><span><i class="fas fa-check"></i></span>印度政府5</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府6" checked><span><i class="fas fa-check"></i></span>印度政府6</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府7" checked><span><i class="fas fa-check"></i></span>印度政府7</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府8" checked><span><i class="fas fa-check"></i></span>印度政府8</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府9" checked><span><i class="fas fa-check"></i></span>印度政府9</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府10" checked><span><i class="fas fa-check"></i></span>印度政府10</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府11" checked><span><i class="fas fa-check"></i></span>印度政府11</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府12" checked><span><i class="fas fa-check"></i></span>印度政府12</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府13" checked><span><i class="fas fa-check"></i></span>印度政府13</label>
+                                                <label class="label"><input type="checkbox" class="issued" value="印度政府14" checked><span><i class="fas fa-check"></i></span>印度政府14</label>
+                                            </div>
+                                            <hr>
+                                            <div class="button">
+                                                <button style="display:none;" type="button" class="space noicon unlimited_issued ">預設</button>
+                                                <button type="button" class="primary">確認</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter">
+                                <button type="button" class="space noicon gray unlimited_issued_word">預設</button>
+                                <button type="button" class="space noicon unlimited_issued">預設</button>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for="f10">保證機構</label>
+                            <div class="input">
+                                <div class="label">
+                                    <div class="select other_select">
+                                        <b>保證機構<i class="fas fa-caret-down"></i></b>
+                                        <div class="popup">
+                                            <div>
+                                                <title>選擇保證機構</title>
+                                                <input type="text" placeholder="請輸入關鍵字" class="search search_guarantee">
+                                            </div>
+                                            <hr>
+                                            <div class="list scrollbar">
+                                                <label class="label"><input type="checkbox" class="guarantee" value="印度政府1" checked><span><i class="fas fa-check"></i></span>印度政府1</label>
+                                                <label class="label"><input type="checkbox" class="guarantee" value="印度政府2" checked><span><i class="fas fa-check"></i></span>印度政府2</label>
+                                                <label class="label"><input type="checkbox" class="guarantee" value="印度政府3" checked><span><i class="fas fa-check"></i></span>印度政府3</label>
+                                                <label class="label"><input type="checkbox" class="guarantee" value="印度政府4" checked><span><i class="fas fa-check"></i></span>印度政府4</label>
+                                                <label class="label"><input type="checkbox" class="guarantee" value="印度政府5" checked><span><i class="fas fa-check"></i></span>印度政府5</label>
+                                                <label class="label"><input type="checkbox" class="guarantee" value="印度政府6" checked><span><i class="fas fa-check"></i></span>印度政府6</label>
+                                            </div>
+                                            <hr>
+                                            <div class="button">
+                                                <button style="display: none;" type="button" class="space noicon unlimited_guarantee">預設</button>
+                                                <button type="button" class="primary">確認</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter">
+                                <button type="button" class="space noicon gray unlimited_guarantee_word">預設</button>
+                                <button type="button" class="space noicon unlimited_guarantee">預設</button>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <fieldset>
+                        <button type="button" class="space" id="more">進階篩選條件<i class="fas fa-chevron-down"></i></button>
+                    </fieldset>
+                </div>
+                <div class="foot"><button type="button" class="primary" style="width: 190px;padding: 0;" onclick="javascript:location.href='search.html'">顯示1278檔搜尋結果</button></div>
+            </form>
+            <div class="bottom">
+                <div>
+                    <title>登入會員，開啟專屬功能</title>
+                    <button type="button" class="secondary">立即登入</button>
+                </div>
+                <div>
+                    <span><img src="img/check-icon.png">進階搜尋功能</span>
+                    <span><img src="img/check-icon.png">產品詳細資訊</span>
+                    <br>
+                    <span><img src="img/check-icon.png">我的觀察清單</span>
+                    <span><img src="img/check-icon.png">產品資訊比較</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/1aa0071f31.js" crossorigin="anonymous"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/index.js"></script>
+
+
+</html>
